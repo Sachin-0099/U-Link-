@@ -27,37 +27,109 @@ const BlogPage = () => {
 
   const postsPerPage = 6;
 
-  // Initial mock data
-  const initialPosts = [
+   const initialPosts=[
     {
-      id: 1,
-      slug: 'ultimate-guide-url-shortening',
-      title: 'The Ultimate Guide to URL Shortening',
-      content: '<p>URL shortening has become an essential tool in the digital age. Whether you\'re sharing links on social media, in emails, or in printed materials, short URLs make your links more manageable and visually appealing.</p><p>In this comprehensive guide, we\'ll cover:</p><ul><li>The benefits of URL shortening</li><li>How to choose the right URL shortener</li><li>Best practices for link management</li><li>Tracking and analytics features</li></ul>',
-      excerpt: 'Learn how URL shortening can improve your marketing campaigns and how to choose the best URL shortener for your needs.',
-      featuredImage: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
-      category: 'URL Shortening',
-      publishedAt: '2023-10-15T10:00:00Z',
-      readTime: '5 min',
-      author: 'Admin',
-      likes: 24,
-      views: 156
+      "id": 1,
+      "slug": "Account-management-program",
+      "title": "Ulinkitus.com Seller Account Management Program",
+      "content": "<p>Ulinkitus.com is one of India’s fastest-growing companies providing IT & e-commerce solutions. We are partnered with Amazon to help sellers manage their accounts and boost their online business performance. Our program offers comprehensive services like inventory management, sales management, and sales boost strategies to ensure your account remains in top health.</p><p>In this program, we cover the following:</p><ul><li>Inventory Management</li><li>Sales Management</li><li>Order Management</li><li>Reviews & Ratings Management</li><li>Account Health Management</li><li>Buyer-Seller Communication</li><li>Sales Boost</li></ul>",
+      "excerpt": "Ulinkitus.com provides a comprehensive Seller Account Management Program, including inventory, sales, order, and review management to boost your Amazon business.",
+      "featuredImage": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "category": "Account Management",
+      "publishedAt": "2024-01-01T00:00:00Z",
+      "readTime": "7 min",
+      "author": "Ulinkitus.com Team",
+      "likes": 35,
+      "views": 120
     },
     {
-      id: 2,
-      slug: 'link-management-tips',
-      title: '10 Essential Link Management Tips for Marketers',
-      content: '<p>Effective link management is crucial for any marketing strategy. With so many campaigns running simultaneously, keeping track of all your links can be challenging.</p><p>Here are our top 10 tips:</p><ol><li>Use a consistent naming convention</li><li>Organize links by campaign</li><li>Track performance metrics</li><li>Update broken links regularly</li><li>Use UTM parameters</li><li>Create branded short links</li><li>Monitor click-through rates</li><li>A/B test different links</li><li>Secure your links</li><li>Integrate with your marketing stack</li></ol>',
-      excerpt: 'Discover proven strategies to organize, track, and optimize your links for better campaign performance.',
-      featuredImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      category: 'Marketing',
-      publishedAt: '2023-09-28T14:30:00Z',
-      readTime: '7 min',
-      author: 'Marketing Team',
-      likes: 42,
-      views: 289
+      "id": 2,
+      "slug": "sales-boost-strategy",
+      "title": "Sales Boost Strategy for Amazon Sellers",
+      "content": "<p>Our Sales Boost strategy is designed to help Amazon sellers achieve greater visibility and success on the platform. It includes listing enhancement, sponsored products, and managing reviews & ratings to ensure your products get noticed and perform well.</p><p>The strategy includes the following steps:</p><ol><li>Listing Enhancement: Optimize listings with images, keywords, bullet points, and detailed descriptions.</li><li>Sponsored Products: Run ad campaigns with a daily budget to boost visibility.</li><li>Reviews and Ratings: Maintain high reviews and ratings to improve product rankings and sales.</li></ol>",
+      "excerpt": "Our Sales Boost strategy enhances your Amazon listings, runs targeted ads, and maintains high reviews to increase product visibility and sales.",
+      "featuredImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "category": "Sales Boost",
+      "publishedAt": "2024-01-02T12:00:00Z",
+      "readTime": "6 min",
+      "author": "Ulinkitus.com Team",
+      "likes": 45,
+      "views": 230
+    },
+    {
+      "id": 3,
+      "slug": "account-health-management",
+      "title": "Account Health Management for Amazon Sellers",
+      "content": "<p>Maintaining account health is crucial for continued success on Amazon. Our Account Health Management service ensures that your account stays in good standing by monitoring key metrics such as ODR, LSR, and CR, and addressing any negative feedback or claims promptly.</p><p>Our service includes:</p><ul><li>Monitoring Order Defect Ratio (ODR), Late Shipment Ratio (LSR), and Cancellation Ratio (CR).</li><li>Handling Negative Feedback and A-Z Claims.</li><li>Ensuring adherence to Amazon’s policies and avoiding account suspensions.</li></ul>",
+      "excerpt": "Our Account Health Management service helps Amazon sellers maintain a healthy account by managing key metrics and handling negative feedback and claims.",
+      "featuredImage": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "category": "Account Health",
+      "publishedAt": "2024-01-03T09:00:00Z",
+      "readTime": "8 min",
+      "author": "Ulinkitus.com Team",
+      "likes": 55,
+      "views": 310
     }
-  ];
+  ,
+    {
+      "id": 4,
+      "slug": "inventory-management-best-practices",
+      "title": "Best Practices for Inventory Management on Amazon",
+      "content": "<p>Inventory management is crucial for maintaining a smooth Amazon seller account. Our program helps you efficiently manage your inventory to ensure stock levels are optimal, preventing stockouts or excess stock. We offer advanced tools for syncing inventory across multiple platforms.</p><p>Key Practices include:</p><ul><li>Real-time stock monitoring and alerts</li><li>Synchronizing inventory across marketplaces</li><li>Optimizing stock levels based on sales velocity</li><li>Preventing overselling with automated reorder alerts</li></ul>",
+      "excerpt": "Our Inventory Management service helps you optimize stock levels, preventing stockouts and excess stock, and keeping your account in top shape.",
+      "featuredImage": "https://images.unsplash.com/photo-1588233209265-f26c314db34d?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDJ8fGluZ2VuaW91c3xlbnwwfHx8fDE2NjAyODgxNzY&ixlib=rb-1.2.1&q=80&w=1080",
+      "category": "Inventory Management",
+      "publishedAt": "2024-01-04T08:00:00Z",
+      "readTime": "6 min",
+      "author": "Ulinkitus.com Team",
+      "likes": 30,
+      "views": 180
+    },
+    {
+      "id": 5,
+      "slug": "order-management-system",
+      "title": "Streamlining Order Management for Amazon Sellers",
+      "content": "<p>Our Order Management System (OMS) ensures timely dispatch and accurate tracking of your orders. We work closely with your team to monitor the status of each order and resolve any issues that arise during processing, preventing late shipments and maintaining a high level of customer satisfaction.</p><p>Our OMS includes:</p><ul><li>Automated order processing and tracking</li><li>Real-time order status updates</li><li>Order prioritization based on urgency</li><li>Integration with third-party logistics providers</li></ul>",
+      "excerpt": "Our Order Management System ensures timely dispatch and tracking of orders, preventing late shipments and improving customer satisfaction.",
+      "featuredImage": "https://images.unsplash.com/photo-1627294284943-b50d520f5b13?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDJ8fG9yZGVycyUyMGZvb2QlMjBwb2Nlc3xlbnwwfHx8fDE2NjAyODgxNzY&ixlib=rb-1.2.1&q=80&w=1080",
+      "category": "Order Management",
+      "publishedAt": "2024-01-05T07:00:00Z",
+      "readTime": "5 min",
+      "author": "Ulinkitus.com Team",
+      "likes": 40,
+      "views": 210
+    },
+    {
+      "id": 6,
+      "slug": "reviews-and-rating-management-strategy",
+      "title": "Effective Strategy for Managing Reviews & Ratings on Amazon",
+      "content": "<p>Reviews and ratings are vital for the success of your products on Amazon. Our strategy helps you maintain a high average rating by addressing customer feedback and ensuring that your products are meeting customer expectations.</p><p>Our strategy includes:</p><ul><li>Monitoring and responding to customer reviews</li><li>Resolving issues with low-rated reviews</li><li>Using customer feedback to improve products</li><li>Ensuring compliance with Amazon’s review guidelines</li></ul>",
+      "excerpt": "Our strategy for managing reviews and ratings ensures high customer satisfaction and helps maintain your product’s ranking on Amazon.",
+      "featuredImage": "https://images.unsplash.com/photo-1601345203481-697c6fdd8b52?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDIwfHByb2R1Y3R8ZW58MHx8fHwxNjYwMjg4MTc2&ixlib=rb-1.2.1&q=80&w=1080",
+      "category": "Reviews & Ratings Management",
+      "publishedAt": "2024-01-06T10:00:00Z",
+      "readTime": "7 min",
+      "author": "Ulinkitus.com Team",
+      "likes": 50,
+      "views": 250
+    },
+    {
+      "id": 7,
+      "slug": "sales-performance-analysis",
+      "title": "Analyzing Sales Performance for Amazon Sellers",
+      "content": "<p>Our Sales Performance Analysis service helps you understand how your products are performing on Amazon. By analyzing key performance metrics such as conversion rates, average order value, and traffic sources, we provide insights to optimize your strategy for better sales results.</p><p>Our analysis includes:</p><ul><li>Reviewing conversion rates and identifying improvement areas</li><li>Tracking traffic sources and optimizing for high-converting channels</li><li>Analyzing pricing strategies and their impact on sales</li><li>Recommending new strategies based on sales data</li></ul>",
+      "excerpt": "Our Sales Performance Analysis service helps you optimize your Amazon sales strategy by providing detailed insights into performance metrics.",
+      "featuredImage": "https://images.unsplash.com/photo-1589445922082-3d82d720d9a4?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDJ8fHNhbGVzJTIwZGV0YWlsc3xlbnwwfHx8fDE2NjAyODgxNzY&ixlib=rb-1.2.1&q=80&w=1080",
+      "category": "Sales Analysis",
+      "publishedAt": "2024-01-07T11:00:00Z",
+      "readTime": "6 min",
+      "author": "Ulinkitus.com Team",
+      "likes": 60,
+      "views": 320
+    }
+  ]
+  
+  
 
   // Initialize blog data
   useEffect(() => {
@@ -76,7 +148,7 @@ const BlogPage = () => {
     setComments(commentsMap);
     
     // Extract unique categories
-    const uniqueCategories = ['all', ...new Set(initialPosts.map(post => post.category))];
+    const uniqueCategories = ['All', ...new Set(initialPosts.map(post => post.category))];
     setCategories(uniqueCategories);
     setIsLoading(false);
   }, []);
@@ -85,7 +157,7 @@ const BlogPage = () => {
   useEffect(() => {
     let results = posts;
     
-    if (selectedCategory !== 'all') {
+    if (selectedCategory !== 'All') {
       results = results.filter(post => post.category === selectedCategory);
     }
     
@@ -244,8 +316,8 @@ const BlogPage = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Blog Header */}
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-800 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-500">
-            Ulinkitus Blog
+          <h1 className="text-5xl font-bold text-[#b73235] mb-4 bg-clip-text text-transparent bg-[#b73235]">
+            U-Link It Us Blog
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover the latest insights on URL shortening, digital marketing, and online growth strategies
@@ -256,8 +328,8 @@ const BlogPage = () => {
               onClick={() => setShowSubmissionForm(!showSubmissionForm)}
               className={`px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 ${
                 showSubmissionForm 
-                  ? 'bg-red-500 text-white hover:bg-red-600'
-                  : 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
+                  ? 'bg-[#b73235] text-white hover:bg-[#b73235]'
+                  : 'bg-[#b73235] text-white'
               } shadow-md hover:shadow-lg`}
             >
               {showSubmissionForm ? 'Cancel Submission' : 'Write a Blog Post'}
@@ -265,12 +337,12 @@ const BlogPage = () => {
           </div>
           
           {/* Search and Filter */}
-          <div className="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-sm">
+          <div className="max-w-4xl mx-auto p-6 rounded-xl bg-white">
             <div className="relative mb-6">
               <input
                 type="text"
                 placeholder="Search articles..."
-                className="w-full px-5 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent shadow-sm"
+                className="w-full px-5 py-3 border border-[#b73235] rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent shadow-sm"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -289,7 +361,7 @@ const BlogPage = () => {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
                     selectedCategory === category
-                      ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-md'
+                      ? 'bg-[#b73235] text-white shadow-md'
                       : 'bg-white text-gray-700 hover:bg-gray-100 shadow-sm'
                   }`}
                 >
@@ -428,7 +500,7 @@ const BlogPage = () => {
         {/* Blog Posts Grid */}
         {isLoading ? (
           <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#b73235]"></div>
           </div>
         ) : (
           <>
@@ -616,42 +688,7 @@ const BlogPage = () => {
         )}
 
         {/* Newsletter CTA */}
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8 text-center text-white mb-12 shadow-lg">
-          <h3 className="text-3xl font-bold mb-4">Stay Updated with Ulinkitus</h3>
-          <p className="text-lg mb-6 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest articles, updates, and exclusive content.
-          </p>
-          
-          {isSubscribed ? (
-            <div className="bg-white/20 p-4 rounded-lg inline-block">
-              <p className="flex items-center justify-center">
-                <svg className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Thank you for subscribing!
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-800"
-                required
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-colors shadow-sm"
-              >
-                Subscribe
-              </button>
-            </form>
-          )}
-          
-          <p className="text-sm mt-4 opacity-80">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
+       
       </main>
     </div>
   );
