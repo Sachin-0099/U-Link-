@@ -157,6 +157,11 @@ const TeamShowcase = () => {
                 animate={{ opacity: hoveredMember === member.id ? 1 : 0 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  window.location.href = `mailto:${member.social.email}?subject=Let's Connect&body=Hi ${member.name},%0D%0A%0D%0AI would love to connect with you.%0D%0A%0D%0ABest regards,%0D%0A[Your Name]`;
+                }}
+                
+                
               >
                 Contact Mr.{member.name.split(' ')[0]}
               </motion.button>

@@ -8,7 +8,7 @@ function MainLayout({ children }) {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       {/* Add padding-top to push content below the fixed navbar */}
-      <main className="flex-grow pt-20">{children}</main>
+      <main className="flex-grow pt-25">{children}</main>
       <Footer />
     </div>
   );

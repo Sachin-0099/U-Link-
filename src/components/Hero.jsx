@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate=useNavigate();
   return (
     <section className="bg-white min-h-screen flex items-center justify-center px-6 py-12" aria-label="Hero Section">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-16 relative">
@@ -24,7 +26,10 @@ function Hero() {
             >
               Get a FREE Consultation
             </button>
-            <button
+            <button 
+            onClick={navigate("/portfolio")}
+        
+           
               className="bg-white border border-gray-300 hover:bg-gray-100 text-gray-800 font-medium py-3 px-6 rounded flex items-center gap-2"
               aria-label="View Ulinkit's portfolio"
             >
