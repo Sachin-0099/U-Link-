@@ -9,6 +9,7 @@ import TeamSection from '../components/TeamSection';
 import About from '../components/About';
 import Journey from '../components/Journey';
 import TeamShowcase from '../components/TeamShowCase';
+import PartnerTestimonials from '../components/Testimonials';
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
  
     <StatsSection/>
     <TeamShowcase/>
+    <PartnerTestimonials/>
 
   
     </div>
