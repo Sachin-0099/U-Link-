@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 const milestones = [
   {
@@ -41,8 +40,6 @@ const milestones = [
 ];
 
 const CompanyJourney = () => {
-  const containerRef = useRef();
-
   return (
     <section className="py-12 md:py-20 px-4 bg-white" aria-label="Our Company Journey Timeline">
       {/* Header with semantic HTML */}
@@ -53,19 +50,16 @@ const CompanyJourney = () => {
         </h1>
       </header>
 
-      {/* Timeline */}
-      <div
-        className="relative overflow-x-auto scroll-smooth snap-x snap-mandatory"
-        ref={containerRef}
-      >
-        {/* Horizontal Line through numbers */}
-        <div className="absolute top-[30px] left-0 h-1 w-full bg-[#b73235] z-0" />
+      {/* Timeline - Vertical on mobile, horizontal on desktop */}
+      <div className="relative">
+        {/* Horizontal Line through numbers - Hidden on mobile */}
+        <div className="hidden md:block absolute top-[30px] left-0 h-1 w-full bg-[#b73235] z-0" />
 
-        <div className="flex space-x-8 md:space-x-20 min-w-[1000px] justify-start z-10 relative px-4">
+        <div className="md:flex md:space-x-20 md:min-w-[1000px] md:justify-start md:relative md:px-4">
           {milestones.map((milestone, index) => (
             <motion.article
               key={milestone.id}
-              className="flex flex-col items-center w-48 snap-start"
+              className="flex flex-col items-center mb-12 md:mb-0 w-full md:w-48"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -73,9 +67,12 @@ const CompanyJourney = () => {
               aria-labelledby={`milestone-${milestone.id}-title`}
             >
               {/* Number Circle with glow */}
-              <div className="relative z-10 group">
+              <div className="relative z-10 group flex md:block items-center">
+                {/* Vertical line for mobile */}
+                <div className="md:hidden absolute left-6 top-0 bottom-0 w-1 bg-gray-800 -z-10" />
+                
                 <div
-                  className={`w-12 md:w-14 h-12 md:h-14 flex items-center justify-center rounded-full border-4 shadow-xl text-white font-semibold text-lg transition duration-300 transform group-hover:scale-110 ${
+                  className={`w-14 h-14 flex items-center justify-center rounded-full border-4 shadow-xl text-white font-semibold text-lg transition duration-300 transform group-hover:scale-110 ${
                     index % 2 === 0 ? "bg-gray-800" : "bg-[#b73235]"
                   } border-white`}
                   id={`milestone-${milestone.id}-title`}
@@ -83,15 +80,20 @@ const CompanyJourney = () => {
                 >
                   {milestone.id}
                 </div>
+                
+                {/* Title for mobile */}
+                <h2 className="md:hidden ml-4 text-xl font-semibold text-gray-800">
+                  Milestone {milestone.id}
+                </h2>
               </div>
 
-              {/* Connector Line */}
-              <div className="w-1 h-8 bg-gray-800 mt-1 mb-2 z-10" />
+              {/* Connector Line - Hidden on mobile */}
+              <div className="hidden md:block w-1 h-8 bg-gray-800 mt-1 mb-2 z-10" />
 
-              {/* Milestone Card with tilt + glow on hover */}
+              {/* Milestone Card */}
               <motion.div
-                className="w-40 md:w-48 h-40 md:h-48 rounded-full relative overflow-hidden flex items-center justify-center text-center text-white text-xs md:text-sm px-4 border-4 border-gray-200 shadow-lg group cursor-pointer"
-                whileHover={{ scale: 1.05, rotateZ: 1 }}
+                className="mt-4 md:mt-0 w-full md:w-48 h-48 rounded-xl md:rounded-full relative overflow-hidden flex items-center justify-center text-center text-white text-sm px-6 md:px-4 border-4 border-gray-200 shadow-lg group cursor-pointer"
+                whileHover={{ scale: 1.02, rotateZ: 1 }}
                 transition={{ type: "spring", stiffness: 200 }}
                 style={{
                   backgroundImage: `url(${milestone.img})`,
@@ -101,20 +103,14 @@ const CompanyJourney = () => {
                 aria-label={`Milestone ${milestone.id}: ${milestone.description}`}
                 role="img"
               >
-                <div className="absolute inset-0 bg-black/60 rounded-full transition-opacity duration-300 group-hover:bg-black/70" />
-                <p className="relative z-10">{milestone.description}</p>
-                {/* Hidden for screen readers since text is already visible */}
+                <div className="absolute inset-0 bg-black/60 rounded-xl md:rounded-full transition-opacity duration-300 group-hover:bg-black/70" />
+                <p className="relative z-10 px-2">{milestone.description}</p>
                 <span className="sr-only">{milestone.alt}</span>
               </motion.div>
             </motion.article>
           ))}
         </div>
       </div>
-
-      {/* Navigation instructions for mobile users */}
-      <p className="text-center mt-8 text-gray-600 md:hidden">
-        Swipe horizontally to view all milestones
-      </p>
     </section>
   );
 };
