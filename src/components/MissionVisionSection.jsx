@@ -1,131 +1,198 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { div } from 'framer-motion/client';
+import { Target, Eye, ArrowRight } from 'lucide-react';
 
 const MissionVisionSection = () => {
   const [activeTab, setActiveTab] = useState('mission');
-  const [hoverState, setHoverState] = useState({
-    mission: false,
-    vision: false
-  });
 
   const content = {
     mission: {
       title: "Our Mission",
-      text: "Our mission is to provide our clients with best-in-class services, all under one roof. We are committed to delivering excellence through innovation, professionalism, and integrity in everything we do. By offering a comprehensive range of solutions tailored to meet diverse needs, we aim to become a trusted partner in our clients' growth journey. Whether it's through our cutting-edge strategies, personalized support, or a seamless experience, we strive to exceed expectations and create lasting value for every client we serve.",
-      icon: "🎯",
-      bgColor: "linear-gradient(135deg, #00aeef 0%, #b388eb 100%)"
-
-
-
-      ,
-      accentColor: "#00aeef"
+      text: "Our mission is to provide our clients with best-in-class services, all under one roof. We are committed to delivering excellence through innovation, professionalism, and integrity in everything we do.",
+      icon: <Target size={48} className="text-white" />,
+      bgColor: "linear-gradient(135deg, #0066cc 0%, #00aaff 100%)",
+      accentColor: "#0066cc",
+      points: [
+        "Deliver excellence through innovation",
+        "Provide comprehensive solutions",
+        "Become a trusted growth partner",
+        "Exceed client expectations"
+      ]
     },
     vision: {
       title: "Our Vision",
-      text: "Our vision is to excel as the world's leading procurement and trading connectivity group. We aspire to set new benchmarks in global trade by creating a seamless, efficient, and trusted network that connects businesses across borders. Through innovation, strategic partnerships, and a deep understanding of global markets, we aim to empower our clients with unmatched opportunities and value. Our goal is not just to lead the industry, but to redefine it—making international trade more accessible, transparent, and impactful for businesses of all sizes.",
-      icon: "🔭",
-      bgColor: "linear-gradient(135deg, #bf3235 0%, #ff9a9e 100%)"
-
-
-      ,
-
-      accentColor: "#b73235"
+      text: "Our vision is to excel as the world's leading procurement and trading connectivity group. We aspire to set new benchmarks in global trade by creating a seamless, efficient, and trusted network.",
+      icon: <Eye size={48} className="text-white" />,
+      bgColor: "linear-gradient(135deg, #b73235 0%, #e74c3c 100%)",
+      accentColor: "#b73235",
+      points: [
+        "Set global trade benchmarks",
+        "Create seamless business networks",
+        "Empower with unmatched opportunities",
+        "Redefine industry standards"
+      ]
     }
   };
 
   return (
-    <div className='py-20'>
-    <div className="mission-vision-container ">
-      <div className="mission-vision-section">
-        <div className="tab-buttons">
-          <motion.button
-            className={`tab-btn ${activeTab === 'mission' ? 'active' : ''}`}
-            onClick={() => setActiveTab('mission')}
-            whileHover={{ 
-              scale: 1.05,
-              backgroundColor: hoverState.mission ? content.mission.accentColor : "#f0f0f0"
-            }}
-            onHoverStart={() => setHoverState({...hoverState, mission: true})}
-            onHoverEnd={() => setHoverState({...hoverState, mission: false})}
-            animate={{
-              backgroundColor: activeTab === 'mission' ? content.mission.accentColor : "#f0f0f0",
-              color: activeTab === 'mission' ? "white" : "#333"
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            Mission
-          </motion.button>
-          <motion.button
-            className={`tab-btn ${activeTab === 'vision' ? 'active' : ''}`}
-            onClick={() => setActiveTab('vision')}
-            whileHover={{ 
-              scale: 1.05,
-              backgroundColor: hoverState.vision ? content.vision.accentColor : "#f0f0f0"
-            }}
-            onHoverStart={() => setHoverState({...hoverState, vision: true})}
-            onHoverEnd={() => setHoverState({...hoverState, vision: false})}
-            animate={{
-              backgroundColor: activeTab === 'vision' ? content.vision.accentColor : "#f0f0f0",
-              color: activeTab === 'vision' ? "white" : "#333"
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            Vision
-          </motion.button>
-        </div>
-        
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ 
-              opacity: 1, 
-              y: 0,
-              background: content[activeTab].bgColor
-            }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="tab-content"
-          >
-            <motion.div 
-              className="content-icon"
-              animate={{ rotate: 360 }}
-              transition={{ 
-                rotate: { 
-                  repeat: Infinity, 
-                  duration: 10, 
-                  ease: "linear" 
-                } 
+    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Our <span className="text-[#b73235]">Core</span> Values
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Guiding principles that shape our company's culture and drive our success
+          </p>
+        </motion.div>
+
+        <div className="flex flex-col">
+          {/* Professional Tab Navigation */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
+              {['mission', 'vision'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`relative px-6 py-3 rounded-md text-lg font-medium transition-colors duration-300 ${
+                    activeTab === tab 
+                      ? 'text-white' 
+                      : 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white'
+                  }`}
+                >
+                  {activeTab === tab && (
+                    <motion.span 
+                      layoutId="activeTabIndicator"
+                      className="absolute inset-0 bg-gradient-to-r from-[#0066cc] to-[#b73235] rounded-md z-0"
+                      initial={false}
+                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10 flex items-center gap-2">
+                    {tab === 'mission' ? <Target size={20} /> : <Eye size={20} />}
+                    {tab === 'mission' ? 'Mission' : 'Vision'}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Content Area */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: 1, 
+                y: 0,
+                background: content[activeTab].bgColor
               }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="rounded-xl p-8 md:p-12 shadow-xl relative overflow-hidden max-w-4xl mx-auto"
             >
-              {content[activeTab].icon}
+              {/* Floating elements */}
+              <motion.div 
+                className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white opacity-10"
+                animate={{
+                  x: [0, 10, 0],
+                  y: [0, -10, 0]
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              <div className="relative z-10">
+                <motion.div 
+                  className="mb-8"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  {content[activeTab].icon}
+                </motion.div>
+
+                <motion.h3
+                  className="text-3xl font-bold text-white mb-6"
+                  initial={{ y: 10 }}
+                  animate={{ y: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  {content[activeTab].title}
+                </motion.h3>
+
+                <motion.p
+                  className="text-white/90 mb-8 text-lg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  {content[activeTab].text}
+                </motion.p>
+
+                <ul className="space-y-4 mb-10">
+                  {content[activeTab].points.map((point, index) => (
+                    <motion.li
+                      key={index}
+                      className="flex items-start gap-3 text-white/90"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.5 + index * 0.1 }}
+                    >
+                      <motion.span
+                        animate={{
+                          rotate: [0, 10, -10, 0],
+                          scale: [1, 1.2, 1]
+                        }}
+                        transition={{
+                          duration: 0.6,
+                          delay: 0.5 + index * 0.1
+                        }}
+                      >
+                        <ArrowRight size={20} className="mt-1 flex-shrink-0" />
+                      </motion.span>
+                      {point}
+                    </motion.li>
+                  ))}
+                </ul>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1 }}
+                >
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-white text-gray-900 font-medium rounded-lg flex items-center gap-2"
+                  >
+                    Learn more
+                    <motion.span
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{
+                        repeat: Infinity,
+                        duration: 1.5
+                      }}
+                    >
+                      →
+                    </motion.span>
+                  </motion.button>
+                </motion.div>
+              </div>
             </motion.div>
-            <motion.h3
-              initial={{ x: -20 }}
-              animate={{ x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              {content[activeTab].title}
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              {content[activeTab].text}
-            </motion.p>
-            <motion.div 
-              className="corner-decoration"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.1 }}
-              transition={{ delay: 0.6 }}
-            />
-          </motion.div>
-        </AnimatePresence>
+          </AnimatePresence>
+        </div>
       </div>
-    </div>
-    </div>
+    </section>
   );
 };
 
