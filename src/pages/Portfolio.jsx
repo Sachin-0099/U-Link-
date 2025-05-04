@@ -9,7 +9,7 @@ const InteractivePortfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const containerRef = useRef(null);
   
-  // Animation variants for framer-motion
+//Animated variants for framer-motion
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -25,7 +25,8 @@ const InteractivePortfolio = () => {
       social: {
         linkedin: "#",
         twitter: "#",
-        github: "#"
+        facebook:"#"
+      
       }
     },
     vineet: {
@@ -37,7 +38,7 @@ const InteractivePortfolio = () => {
       social: {
         linkedin: "#",
         twitter: "#",
-        github: "#"
+        facebook:"#"
       }
     }
   };

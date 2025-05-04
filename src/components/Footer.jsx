@@ -26,9 +26,6 @@ L.Icon.Default.mergeOptions({
   shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
 });
 
-
-
-
 // Interactive map component
 const DubaiMap = () => {
   const [hovered, setHovered] = useState(false);
@@ -422,6 +419,23 @@ const FooterSection = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const navigateToPage = (page) => {
+    // Update these paths to match your actual page routes
+    const routes = {
+      home: "/",
+      services: "/services",
+      aboutus: "/aboutus",
+      portfolio: "/portfolio",
+     blog:"/blog"
+    };
+    
+    if (routes[page]) {
+      window.location.href = routes[page];
+    } else {
+      console.warn(`Route for ${page} not found`);
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -539,24 +553,41 @@ const FooterSection = () => {
             </div>
           </motion.div>
 
+          {/* Quick Links */}
           <motion.div variants={itemVariants} className="space-y-4">
-                        <h3 className="text-lg font-semibold text-[#b73235] dark:text-white">QUICK LINKS</h3>
-                        <ul className="space-y-2 text-gray-500 dark:text-gray-400">
-                            {['Home', 'Services', 'About Us', 'Portfolio', 'Contact'].map((link) => (
-                                <motion.li 
-                                    key={link}
-                                    whileHover={{ 
-                                        x: 5,
-                                        color: "#ef4444"
-                                    }}
-                                    transition={{ duration: 0.2 }}
-                                    className="cursor-pointer"
-                                >
-                                    {link}
-                                </motion.li>
-                            ))}
-                        </ul>
-                    </motion.div>
+            <h3 className="text-lg font-semibold text-[#b73235] dark:text-white">
+              QUICK LINKS
+            </h3>
+            <ul className="space-y-2 text-gray-500 dark:text-gray-400">
+              {[
+                { name: "Home", id: "home" },
+                { name: "Services", id: "services" },
+                { name: "About Us", id: "aboutus" },
+                { name: "Portfolio", id: "portfolio" },
+                { name: "Blog", id: "blog" },
+              ].map((link) => (
+                <motion.li
+                  key={link.id}
+                  whileHover={{
+                    x: 5,
+                    color: "#ef4444",
+                  }}
+                  transition={{ duration: 0.2 }}
+                  className="cursor-pointer"
+                >
+                  <a 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigateToPage(link.id);
+                    }}
+                    className="block py-1 hover:text-[#b73235] transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
 
           {/* Newsletter */}
           <motion.div variants={itemVariants}>
