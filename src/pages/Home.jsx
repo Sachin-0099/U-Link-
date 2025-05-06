@@ -13,7 +13,7 @@ import PartnerTestimonials from '../components/Testimonials';
 
 function Home() {
   return (
-    <div className="p-8">
+    <div>
     <Hero/>
     <About/>
     <Journey/>
