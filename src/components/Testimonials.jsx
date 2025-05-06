@@ -1,12 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import { Pagination, A11y, Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 
 const testimonials = [
   {
@@ -47,13 +45,15 @@ const testimonials = [
   },
   {
     logo: "/Images/Meesho.png",
-    "title": "Meesho",
-    "content": "We are aware of the requirements needed to succeed globally in the online industry. Strong management and quality assurance at U-link IT US can only lead to success. I admire your help."
+    title: "Meesho",
+    content:
+      "We are aware of the requirements needed to succeed globally in the online industry. Strong management and quality assurance at U-link IT US can only lead to success. I admire your help.",
   },
   {
     logo: "/Images/Noon.png",
-    "title": "Noon",
-    "content": "The online industry, which seems to be growing constantly, needs a way to efficiently and effectively contact its customers in U-link IT US."
+    title: "Noon",
+    content:
+      "The online industry, which seems to be growing constantly, needs a way to efficiently and effectively contact its customers in U-link IT US.",
   },
   {
     logo: "/Images/snapdeal.webp",
@@ -69,42 +69,34 @@ const testimonials = [
   },
   {
     logo: "/Images/proine.png",
-    "title": "Prione India",
-    "content": "Good corporate get-together and also a good experience and helpful, well-trained staff that is also supportive at U-link IT US."
+    title: "Prione India",
+    content:
+      "Good corporate get-together and also a good experience and helpful, well-trained staff that is also supportive at U-link IT US.",
   },
   {
     logo: "/Images/tradling.png",
-    "title": "Tradeling.com",
-    "content": "One of the top services available is U-link IT US, whose goal is to offer clients the best services available under one roof."
+    title: "Tradeling.com",
+    content:
+      "One of the top services available is U-link IT US, whose goal is to offer clients the best services available under one roof.",
   },
-  // Add more companies as needed
 ];
 
 const PartnerTestimonials = () => {
   return (
     <section className="bg-white py-16 px-4 relative">
-     <Swiper
-  modules={[Navigation, Pagination, A11y, Autoplay]}
-  spaceBetween={30}
-  slidesPerView={1}
-  breakpoints={{
-    640: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  }}
-  navigation={{
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  }}
-  pagination={{ clickable: true }}
-  autoplay={{ delay: 4000 }}
-  loop
->
-    {/* Custom Arrows */}
-<div className="swiper-button-prev !text-[#b73235] !left-0 md:!left-[-40px] z-10" />
-<div className="swiper-button-next !text-[#b73235] !right-0 md:!right-[-40px] z-10" />
-
-
+      <Swiper
+        modules={[Pagination, A11y, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 4000 }}
+        loop
+      >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col items-center max-w-md mx-auto text-center p-6 space-y-4">
@@ -116,7 +108,6 @@ const PartnerTestimonials = () => {
                 />
               </div>
               <div className="bg-white border border-gray-200 rounded-r-[2rem] rounded-b-[0.75rem] shadow-lg px-6 py-6 transition-all hover:shadow-xl duration-300">
-
                 <h3 className="text-[#b73235] font-bold text-lg mb-3">
                   {item.title}
                 </h3>

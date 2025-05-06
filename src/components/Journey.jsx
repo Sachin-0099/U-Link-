@@ -72,19 +72,18 @@ const CompanyJourney = () => {
                 <div className="md:hidden absolute left-6 top-0 bottom-0 w-1 bg-gray-800 -z-10" />
                 
                 <motion.div
-  whileHover={{ rotateY: 360 }}
-  transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}
-  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 shadow-xl text-white font-semibold text-lg ${
-    index % 2 === 0 ? "bg-gray-800" : "bg-[#b73235]"
-  } border-white`}
-  id={`milestone-${milestone.id}-title`}
-  aria-hidden="true"
-  style={{ transformStyle: "preserve-3d" }}
->
-  {milestone.id}
-</motion.div>
+                  whileHover={{ rotateY: 360 }}
+                  transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}
+                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 shadow-xl text-white font-semibold text-lg ${
+                    index % 2 === 0 ? "bg-gray-800" : "bg-[#b73235]"
+                  } border-white`}
+                  id={`milestone-${milestone.id}-title`}
+                  aria-hidden="true"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  {milestone.id}
+                </motion.div>
 
-                
                 {/* Title for mobile */}
                 <h2 className="md:hidden ml-4 text-xl font-semibold text-gray-800">
                   Milestone {milestone.id}
@@ -94,30 +93,28 @@ const CompanyJourney = () => {
               {/* Connector Line - Hidden on mobile */}
               <div className="hidden md:block w-1 h-8 bg-gray-800 mt-1 mb-2 z-10" />
 
-              {/* Milestone Card with horizontal circular motion */}
+              {/* Circular Milestone Card - Same on mobile and desktop */}
               <motion.div
-  className="mt-4 md:mt-0 w-full md:w-54 h-54 rounded-xl md:rounded-full relative overflow-hidden flex items-center justify-center text-center text-white text-sm px-6 md:px-4 border-4 border-gray-200 shadow-lg group cursor-pointer"
-  whileHover={{
-    rotateY: 360,
-   
-    transition: {
-      duration: 2,
-      ease: "easeInOut",
-      repeat: Infinity,
-    },
-  }}
-  style={{
-    backgroundImage: `url(${milestone.img})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    transformStyle: "preserve-3d",
-  }}
-  aria-label={`Milestone ${milestone.id}: ${milestone.description}`}
-  role="img"
->
-
-                <div className="absolute inset-0 bg-black/60 rounded-xl md:rounded-full transition-opacity duration-300 group-hover:bg-black/70" />
-                <p className="relative z-10 px-2">{milestone.description}</p>
+                className="mt-4 md:mt-0 w-54 h-54 rounded-full relative overflow-hidden flex items-center justify-center text-center text-white text-sm p-6 border-4 border-gray-200 shadow-lg group cursor-pointer"
+                whileHover={{
+                  rotateY: 360,
+                  transition: {
+                    duration: 2,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                  },
+                }}
+                style={{
+                  backgroundImage: `url(${milestone.img})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  transformStyle: "preserve-3d",
+                }}
+                aria-label={`Milestone ${milestone.id}: ${milestone.description}`}
+                role="img"
+              >
+                <div className="absolute inset-0 bg-black/60 rounded-full transition-opacity duration-300 group-hover:bg-black/70" />
+                <p className="relative z-10 px-4">{milestone.description}</p>
                 <span className="sr-only">{milestone.alt}</span>
               </motion.div>
             </motion.article>

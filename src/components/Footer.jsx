@@ -109,7 +109,7 @@ const SocialLink = ({ href, icon: Icon, name }) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative z-10 block p-2 rounded-full bg-white dark:bg-gray-800 shadow-md"
+        className="relative z-10 block p-2 rounded-full bg-white  shadow-md"
         whileHover={{
           scale: 1.2,
           rotate: [0, 10, -10, 0],
@@ -126,7 +126,7 @@ const SocialLink = ({ href, icon: Icon, name }) => {
       <AnimatePresence>
         {isHovered && (
           <motion.span
-            className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+            className="absolute -bottom-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded whitespace-nowrap"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 5 }}

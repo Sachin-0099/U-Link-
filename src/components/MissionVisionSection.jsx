@@ -35,7 +35,7 @@ const MissionVisionSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16  dark:bg-gray-900">
+    <section className="py-20 px-4 md:px-8 lg:px-16  ">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ const MissionVisionSection = () => {
         <div className="flex flex-col">
           {/* Professional Tab Navigation */}
           <div className="flex justify-center mb-8">
-            <div className="inline-flex bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
+            <div className="inline-flex bg-gray-100  p-1 rounded-lg">
               {['mission', 'vision'].map((tab) => (
                 <button
                   key={tab}
