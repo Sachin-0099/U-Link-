@@ -5,10 +5,14 @@ import Footer from '../components/Footer';
 
 function MainLayout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      {/* Add padding-top to push content below the fixed navbar */}
-      <main className="flex-grow pt-30">{children}</main>
+      
+      {/* Responsive padding to offset fixed navbar height */}
+      <main className="flex-grow pt-24 md:pt-28 lg:pt-32 px-4">
+        {children}
+      </main>
+      
       <Footer />
     </div>
   );
