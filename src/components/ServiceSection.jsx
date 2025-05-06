@@ -131,7 +131,7 @@ const ServicesSection = () => {
         </script>
       </Head>
 
-      <section className="services-section py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-label="Our eCommerce Services">
+      <section className="services-section py-16 px-4 sm:px-6 lg:px-8 " aria-label="Our eCommerce Services">
         <div className="max-w-7xl mx-auto">
           <motion.header 
             initial={{ opacity: 0, y: 20 }}
@@ -167,29 +167,43 @@ const ServicesSection = () => {
                 aria-labelledby={`service-title-${service.id}`}
               >
                 <div className="relative z-10 p-8 h-full flex flex-col">
-                  <div className="flex items-start mb-6">
-                    <motion.div 
-                      className="service-icon text-4xl p-4 rounded-xl mr-4 flex-shrink-0"
-                      style={{ 
-                        backgroundColor: `${service.color}10`,
-                        color: service.color
-                      }}
-                      animate={{
-                        rotate: hoveredService === index ? [0, 10, -10, 0] : 0,
-                      }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      {service.icon}
-                    </motion.div>
-                    <div>
-                      <h2 id={`service-title-${service.id}`} className="text-xl font-bold text-gray-900">
-                        {service.title}
-                      </h2>
-                      <span className="inline-block mt-1 text-xs font-medium px-2 py-1 rounded-full" style={{ backgroundColor: `${service.color}20`, color: service.color }}>
-                        {service.keywords.split(',')[0]}
-                      </span>
-                    </div>
-                  </div>
+                <div className="relative flex flex-col items-center justify-start px-4 pt-6 pb-4">
+  {/* Top-right badge */}
+  <span
+    className="absolute top-[-64px] right-[-62px] z-10 text-xs font-medium px-3 py-1 rounded-full"
+    style={{
+      backgroundColor: `${service.color}20`,
+      color: service.color,
+    }}
+  >
+    {service.keywords.split(',')[0]}
+  </span>
+
+  {/* Icon */}
+  <motion.div
+    className="text-4xl p-4 rounded-xl mb-3"
+    style={{
+      backgroundColor: `${service.color}10`,
+      color: service.color,
+    }}
+    animate={{
+      rotate: hoveredService === index ? [0, 10, -10, 0] : 0,
+    }}
+    transition={{ duration: 0.6 }}
+  >
+    {service.icon}
+  </motion.div>
+
+  {/* Title */}
+  <h2
+    id={`service-title-${service.id}`}
+    className="text-center text-xl font-bold text-gray-900"
+  >
+    {service.title}
+  </h2>
+</div>
+
+
 
                   <AnimatePresence>
                     <motion.div

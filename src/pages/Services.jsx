@@ -396,7 +396,7 @@ const ServicesPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-base font-semibold text-[#b73235] tracking-wide uppercase">
-              Our 7-Point Management System
+              Our  Management System
             </h2>
             <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
               Comprehensive Account Management Solution

@@ -548,7 +548,7 @@ const FooterSection = () => {
                 Umm Ramool, Dubai - U.A.E
               </motion.p>
               <motion.p whileHover={{ x: 5 }}>
-                Dhiraj Kumar Gupta (Director): +91-8750518844
+                Dhiraj Kumar Gupta (Director): +91-8750518844, +971 58 586 8470
               </motion.p>
             </div>
           </motion.div>
