@@ -44,10 +44,10 @@ const MissionVisionSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold !text-gray-900  mb-4">
             Our <span className="text-[#b73235]">Core</span> Values
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
             Guiding principles that shape our company's culture and drive our success
           </p>
         </motion.div>
