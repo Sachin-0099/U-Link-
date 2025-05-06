@@ -81,7 +81,7 @@ const InteractivePortfolio = () => {
         className={`min-h-[200vh] flex flex-col items-center justify-start p-4 md:p-8 relative overflow-hidden transition-colors duration-300 ${theme === "dark" ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"}`}
       >
         {/* Navigation and Theme Toggle */}
-        <div className="hidden md:flex fixed top-20 left-0 right-0 justify-between items-center p-4 md:p-6 z-50">
+        <div className="hidden md:flex fixed top-30 left-0 right-0 justify-between items-center p-4 md:p-6 z-50">
   <motion.div 
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}

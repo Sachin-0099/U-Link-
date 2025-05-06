@@ -9,7 +9,7 @@ function MainLayout({ children }) {
       <Navbar />
       
       {/* Responsive padding to offset fixed navbar height */}
-      <main className="flex-grow pt-24 md:pt-28 lg:pt-32 px-4">
+      <main className="flex-grow pt-24 md:pt-28 lg:pt-32 ">
         {children}
       </main>
       

@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
+import Schedule from './pages/Schedule';
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/services" element={<Services/>} />
           <Route path="/portfolio" element={<Portfolio/>} />
           <Route path="/blog" element={<Blog/>} />
+          <Route path="/schedule" element={<Schedule/>} />
           {/* Add more routes as needed */}
           <Route path="*" element={<div>404 Not Found</div>} /> 
 
