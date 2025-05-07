@@ -11,6 +11,7 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Schedule from './pages/Schedule';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/schedule" element={<Schedule />} />
-          <Route path="*" element={<div>404 Not Found</div>} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </MainLayout>
     </Router>
