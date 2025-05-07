@@ -508,7 +508,7 @@ const FooterSection = () => {
               >
                 <MapPin className="w-5 h-5 text-[#b73235]" />
               </motion.div>
-              India Office
+              Corporate Office
             </h3>
             <address className="text-gray-500 dark:text-gray-400 not-italic space-y-2">
               <motion.p whileHover={{ x: 5 }}>Uttam Nagar, New Delhi</motion.p>
@@ -553,7 +553,7 @@ const FooterSection = () => {
               >
                 <MapPin className="w-5 h-5 text-[#b73235]" />
               </motion.div>
-              UAE Head Office
+              UAE  Office
             </h3>
             <h4 className="text-md font-medium text-gray-600 dark:text-gray-300">
               Where to find us

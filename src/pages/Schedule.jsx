@@ -35,20 +35,6 @@ const Schedule = () => {
 
   const contactMethods = [
     {
-      title: "UAE Phone",
-      icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92H19C18.45 20.92 18 20.47 18 19.92V16.92C18 16.37 18.45 15.92 19 15.92H21C21.55 15.92 22 16.37 22 16.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M16 3.92H8C4 3.92 2 5.92 2 9.92V15.92C2 19.92 4 21.92 8 21.92H16C20 21.92 22 19.92 22 15.92V9.92C22 5.92 20 3.92 16 3.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M13 7.92H15" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M6 7.92H11" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M6 11.92H13" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
-      contact: "+971 58 586 8470",
-      href: "tel:+971585868470"
-    },
-    {
       title: "India Phone",
       icon: (
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,6 +48,21 @@ const Schedule = () => {
       contact: "+91 8750518844",
       href: "tel:+918750518844"
     },
+    {
+      title: "UAE Phone",
+      icon: (
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92H19C18.45 20.92 18 20.47 18 19.92V16.92C18 16.37 18.45 15.92 19 15.92H21C21.55 15.92 22 16.37 22 16.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M16 3.92H8C4 3.92 2 5.92 2 9.92V15.92C2 19.92 4 21.92 8 21.92H16C20 21.92 22 19.92 22 15.92V9.92C22 5.92 20 3.92 16 3.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M13 7.92H15" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M6 7.92H11" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M6 11.92H13" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+      contact: "+971 58 586 8470",
+      href: "tel:+971585868470"
+    },
+   
     {
       title: "Whatsapp",
       icon: (
