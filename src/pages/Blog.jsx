@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
+
 const BlogPage = () => {
   // State management
   const [posts, setPosts] = useState([]);
@@ -298,6 +299,16 @@ const BlogPage = () => {
   };
 
   return (
+    <>
+    <Helmet>
+  <title>Blog - U-Link It Us | Insights on IT, E-commerce & Business Growth</title>
+  <meta
+    name="description"
+    content="Read the latest insights, strategies, and updates from U-Link It Us — covering IT trends, e-commerce tips, procurement strategies, and more."
+  />
+</Helmet>
+
+    
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* SEO Meta Tags */}
       <Helmet>
@@ -694,6 +705,7 @@ const BlogPage = () => {
        
       </main>
     </div>
+    </>
   );
 };
 

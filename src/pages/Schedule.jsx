@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 const Schedule = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -221,6 +222,16 @@ const Schedule = () => {
   };
 
   return (
+    <>
+    <Helmet>
+  <title>Schedule a Call - U-Link It Us | Book Your Free Consultation</title>
+  <meta
+    name="description"
+    content="Book a free consultation call with our experts at U-Link It Us. Let's discuss how we can optimize your IT, e-commerce, and procurement strategies."
+  />
+</Helmet>
+
+   
     <motion.div 
       initial="hidden"
       animate="visible"
@@ -883,6 +894,7 @@ const Schedule = () => {
         </div>
       </motion.div>
     </motion.div>
+    </>
   );
 };
 

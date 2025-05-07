@@ -101,18 +101,19 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(183, 50, 53, 0.3)" }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#b73235] text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg relative overflow-hidden text-sm sm:text-base"
-              aria-label="Get a free consultation from Ulinkit"
-            >
-              <span className="relative z-10">Get FREE Consultation</span>
-              <motion.span
-                className="absolute inset-0 bg-gradient-to-r from-[#b73235] to-[#e74c3c] opacity-0 hover:opacity-100 transition-opacity duration-300 z-0"
-                aria-hidden="true"
-              />
-            </motion.button>
+           <motion.button
+      onClick={() => navigate("/contact")}  // Navigate to the contact page on click
+      whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(183, 50, 53, 0.3)" }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-[#b73235] text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg relative overflow-hidden text-sm sm:text-base"
+      aria-label="Get a free consultation from Ulinkit"
+    >
+      <span className="relative z-10">Get FREE Consultation</span>
+      <motion.span
+        className="absolute inset-0 bg-gradient-to-r from-[#b73235] to-[#e74c3c] opacity-0 hover:opacity-100 transition-opacity duration-300 z-0"
+        aria-hidden="true"
+      />
+    </motion.button>
             
             <motion.button 
               onClick={() => navigate("/portfolio")}

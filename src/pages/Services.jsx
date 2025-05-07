@@ -5,6 +5,7 @@ import {
   FaShieldAlt, FaComments, FaRocket, FaChevronDown, FaChevronUp,
   FaCheck, FaHandshake, FaChartBar, FaHeadset, FaTools
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const ServicesPage = () => {
   const [expandedService, setExpandedService] = useState(null);
@@ -359,6 +360,15 @@ const ServicesPage = () => {
   );
 
   return (
+    <>
+   <Helmet>
+  <title>Our Services - U-Link It Us | IT, E-commerce & Procurement Solutions</title>
+  <meta
+    name="description"
+    content="Explore the wide range of services offered by U-Link It Us — from IT consulting to e-commerce management and procurement solutions tailored to drive your business forward."
+  />
+</Helmet>
+
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Navigation Tabs */}
       <div className="sticky top-0 z-10 bg-white shadow-sm">
@@ -453,6 +463,7 @@ const ServicesPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -5,7 +5,9 @@ import {
   FaNetworkWired, FaDatabase, FaSearchDollar, FaShippingFast
 } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import Head from 'next/head';
+// import Head from 'next/head';
+// import PageMeta from '../components/PageMeta';
+import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -62,10 +64,10 @@ const AboutPage = () => {
 
   return (
     <>
-      <Head>
-        <title>About U-Link It Us | IT, E-commerce & Procurement Solutions</title>
-        <meta name="description" content="Learn about U-Link It Us - India's fastest-growing company in IT, e-commerce and procurement solutions with global presence and 15+ years of experience." />
-      </Head>
+        <Helmet>
+        <title>About Us - U-Link It Us</title>
+        <meta name="description" content="Learn about U-Link It Us – top in IT, e-commerce and procurement." />
+      </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}

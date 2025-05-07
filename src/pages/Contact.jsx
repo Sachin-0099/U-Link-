@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion'; // For animations (install: npm install framer-motion)
-
+import { Helmet } from 'react-helmet';
 const Contact = () => {
   const [formVisible, setFormVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -69,6 +69,15 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <Helmet>
+  <title>Contact Us - U-Link It Us | Let's Connect</title>
+  <meta
+    name="description"
+    content="Get in touch with U-Link It Us for expert guidance in IT, e-commerce, and procurement solutions. We're here to help your business grow."
+  />
+</Helmet>
+
     <div className="contact-page" style={{ 
       maxWidth: '900px', 
       margin: '0 auto', 
@@ -645,6 +654,7 @@ const Contact = () => {
         </div>
       </motion.div>
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const InteractivePortfolio = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -76,6 +77,14 @@ const InteractivePortfolio = () => {
   
   return (
     <>
+    <Helmet>
+  <title>Our Portfolio - U-Link It Us | Proven Success in IT & E-commerce</title>
+  <meta
+    name="description"
+    content="Take a look at our portfolio showcasing successful IT, e-commerce, and procurement projects we've delivered for clients across the globe."
+  />
+</Helmet>
+
       <div 
         ref={containerRef}
         className={`min-h-[200vh] flex flex-col items-center justify-start p-4 md:p-8 relative overflow-hidden transition-colors duration-300 ${theme === "dark" ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"}`}
