@@ -120,13 +120,13 @@ const SocialLink = ({ href, icon: Icon, name }) => {
         onHoverEnd={() => setIsHovered(false)}
         aria-label={name}
       >
-        <Icon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+        <Icon className="w-5 h-5 text-gray-700 hover:text-white " />
       </motion.a>
 
       <AnimatePresence>
         {isHovered && (
           <motion.span
-            className="absolute -bottom-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+            className="absolute -bottom-8 left-1/2 transform -translate-x-1/2  text-[#b73235] text-xs px-2 py-1 rounded whitespace-nowrap"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 5 }}
@@ -365,36 +365,55 @@ const NewsletterForm = () => {
       </motion.form>
 
       <motion.div
-        className="flex items-center justify-center gap-4 mt-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
+  className="flex items-center justify-center gap-4 mt-4"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.6 }}
+>
+  <p className="text-sm text-gray-500 dark:text-gray-400">
+    Or connect with:
+  </p>
+  <div className="flex gap-3">
+    {[
+      // {
+      //   icon: Facebook,
+      //   name: "Facebook",
+      //   url: "https://www.facebook.com/yourpage",
+      // },
+      {
+        icon: Twitter,
+        name: "Twitter",
+        url: "https://x.com/dhirajkgupta84",
+      },
+      // {
+      //   icon: Instagram,
+      //   name: "Instagram",
+      //   url: "https://www.instagram.com/yourprofile",
+      // },
+      {
+        icon: Linkedin,
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/dhiraj-kumar-gupta-45b97730/",
+      },
+    ].map((social, index) => (
+      <motion.a
+        key={social.name}
+        href={social.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-[#b73235] hover:text-white transition-colors duration-300"
+        whileHover={{ y: -3, scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7 + index * 0.1 }}
       >
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          Or connect with:
-        </p>
-        <div className="flex gap-3">
-          {[
-            { icon: Facebook, name: "Facebook" },
-            { icon: Twitter, name: "Twitter" },
-            { icon: Instagram, name: "Instagram" },
-            { icon: Linkedin, name: "LinkedIn" },
-          ].map((social, index) => (
-            <motion.a
-              key={social.name}
-              href="#"
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-[#b73235] hover:text-white transition-colors duration-300"
-              whileHover={{ y: -3, scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 + index * 0.1 }}
-            >
-              <social.icon className="w-4 h-4" />
-            </motion.a>
-          ))}
-        </div>
-      </motion.div>
+        <social.icon className="w-4 h-4" />
+      </motion.a>
+    ))}
+  </div>
+</motion.div>
+
     </div>
   );
 };
@@ -601,8 +620,7 @@ const FooterSection = () => {
                 <SocialLink href="#" icon={Facebook} name="Facebook" />
                 <SocialLink href="#" icon={Twitter} name="Twitter" />
                 <SocialLink href="#" icon={Youtube} name="YouTube" />
-                <SocialLink href="#" icon={Instagram} name="Instagram" />
-                <SocialLink href="#" icon={Linkedin} name="LinkedIn" />
+                <SocialLink href="https://www.linkedin.com/in/dhiraj-kumar-gupta-45b97730/" icon={Linkedin} name="LinkedIn" />
               </div>
             </div>
           </motion.div>

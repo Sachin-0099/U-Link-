@@ -545,12 +545,17 @@ const Contact = () => {
             }}>
               Email
             </h4>
-            <p style={{ 
-              color: '#555',
-              fontSize: '1rem'
-            }}>
-              dhiraj@ulinkit.com
-            </p>
+            <a
+  href={`mailto:dhiraj@ulinkit.com?subject=Let's%20Connect%20–%20Regarding%20Your%20Services&body=Hi%20Dhiraj,%0A%0AI%20came%20across%20your%20services%20and%20I’d%20like%20to%20learn%20more%20about%20how%20we%20can%20work%20together.%20Please%20let%20me%20know%20a%20convenient%20time%20for%20a%20call.%0A%0ABest%20regards,%0A[Your%20Name]`}
+  style={{
+    color: '#555',
+    fontSize: '1rem',
+    textDecoration: 'none',
+  }}
+>
+  dhiraj@ulinkit.com
+</a>
+
           </div>
           
           <div style={{ textAlign: 'center' }}>
@@ -580,12 +585,28 @@ const Contact = () => {
             }}>
               Phone
             </h4>
-            <p style={{ 
-              color: '#555',
-              fontSize: '1rem'
-            }}>
-          +971 58 586 8470,<br /> +91 8750518844
-            </p>
+            <a
+  href="tel:+971585868470"
+  style={{
+    color: '#555',
+    fontSize: '1rem',
+    textDecoration: 'none',
+  }}
+>
+  +971 58 586 8470
+</a>
+<br />
+<a
+  href="tel:+918750518844"
+  style={{
+    color: '#555',
+    fontSize: '1rem',
+    textDecoration: 'none',
+  }}
+>
+  +91 8750518844
+</a>
+
           </div>
           
           <div style={{ textAlign: 'center' }}>

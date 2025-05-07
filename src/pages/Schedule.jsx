@@ -61,7 +61,22 @@ const Schedule = () => {
       ),
       contact: "+91 8750518844",
       href: "tel:+918750518844"
+    },
+    {
+      title: "Whatsapp",
+      icon: (
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92H19C18.45 20.92 18 20.47 18 19.92V16.92C18 16.37 18.45 15.92 19 15.92H21C21.55 15.92 22 16.37 22 16.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M16 3.92H8C4 3.92 2 5.92 2 9.92V15.92C2 19.92 4 21.92 8 21.92H16C20 21.92 22 19.92 22 15.92V9.92C22 5.92 20 3.92 16 3.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M13 7.92H15" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M6 7.92H11" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M6 11.92H13" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+      contact: "+91 8750518844",
+      href: "https://wa.me/918750518844?text=Hello%20I%20am%20interested%20in%20your%20services"
     }
+    
   ];
 
   const handleChange = (e) => {
@@ -221,12 +236,45 @@ const Schedule = () => {
       className="schedule-page"
       style={baseStyles.container}
     >
-      <motion.div variants={itemVariants}>
-        <h1 style={baseStyles.heading}>Schedule a Call With Us</h1>
-        <p style={baseStyles.subheading}>
-          Book a convenient time to discuss your project with our team. Select your preferred duration and fill out the form below.
-        </p>
-      </motion.div>
+
+<motion.div
+  variants={itemVariants}
+  initial="hidden"
+  animate="visible"
+  style={{
+    padding: "2rem",
+    borderRadius: "1rem",
+    backgroundColor: "#f7fafc",
+    border: "1px solid #e2e8f0",
+    textAlign: "center",
+    margin: "1rem",
+  }}
+>
+  <h1 style={{ ...baseStyles.heading, color: "#b73235" }}>
+    📅 Schedule a Call – Coming Soon!
+  </h1>
+  <p style={{ ...baseStyles.subheading, color: "#4a5568" }}>
+    We’re working on something exciting! Soon, you’ll be able to schedule calls directly with our team.
+    Stay tuned for updates.
+  </p>
+
+  {/* Scroll hint */}
+  <motion.div
+    animate={{ y: [0, 10, 0] }}
+    transition={{ duration: 1.5, repeat: Infinity }}
+    style={{
+      marginTop: "2rem",
+      color: "#2b6cb0",
+      fontWeight: "500",
+      cursor: "pointer",
+      fontSize: "1rem",
+    }}
+  >
+    👇 Scroll down to contact us now
+  </motion.div>
+</motion.div>
+
+
 
       <div style={baseStyles.gridContainer}>
         <motion.div variants={itemVariants}>
