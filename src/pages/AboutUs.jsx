@@ -5,8 +5,6 @@ import {
   FaNetworkWired, FaDatabase, FaSearchDollar, FaShippingFast
 } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-// import Head from 'next/head';
-// import PageMeta from '../components/PageMeta';
 import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
@@ -64,13 +62,46 @@ const AboutPage = () => {
 
   return (
     <>
-        <Helmet>
-        <title>About Us - U-Link It Us</title>
-        <meta name="description" content="Learn about U-Link It Us – top in IT, e-commerce and procurement." />
+      <Helmet>
+        <title>About U-Link It Us - Global IT, E-commerce & Procurement Solutions</title>
+        <meta name="description" content="Discover U-Link It Us - a leader in global IT solutions, e-commerce platforms, and procurement services with 15+ years of experience serving businesses worldwide." />
+        <meta name="keywords" content="IT solutions, e-commerce services, global procurement, business consulting, Amazon partner, digital transformation" />
+        <meta property="og:title" content="About U-Link It Us - Global Business Solutions Provider" />
+        <meta property="og:description" content="Leading provider of innovative IT, e-commerce, and procurement solutions with a global network spanning USA, UK, and Middle East markets." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ulinkitus.com/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About U-Link It Us | Global Business Solutions" />
+        <meta name="twitter:description" content="15+ years of excellence in delivering cutting-edge IT, e-commerce, and procurement solutions to businesses worldwide." />
+        <link rel="canonical" href="https://www.ulinkitus.com/about" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "U-Link It Us",
+            "url": "https://www.ulinkitus.com",
+            "logo": "https://www.ulinkitus.com/logo.png",
+            "description": "Global provider of IT solutions, e-commerce platforms, and procurement services",
+            "foundingDate": "2011",
+            "founder": {
+              "@type": "Person",
+              "name": "Dhiraj Kumar Gupta"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "India"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/vineet-sharma-2663279/",
+              "https://x.com/dhirajkgupta84",
+             
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
+        {/* Hero Section with semantic h1 */}
         <section className="relative bg-[#b73235] text-white py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#a52a2d] to-[#d13a3d] opacity-95"></div>
           <div className="container mx-auto px-6 relative z-10">
@@ -81,29 +112,33 @@ const AboutPage = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Pioneering Global Business Solutions
+                Pioneering Global Business Solutions Since 2011
               </h1>
               <p className="text-xl md:text-2xl font-light max-w-3xl mx-auto">
-                U-Link It Us is transforming industries through innovative IT, e-commerce, and procurement solutions
+                U-Link It Us is transforming industries through innovative IT, e-commerce, and procurement solutions across USA, UK, UAE and Middle East markets.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Navigation */}
-        <nav className="sticky top-0 z-20 bg-white shadow-sm">
+        {/* Navigation with aria labels */}
+        <nav aria-label="About page sections" className="sticky top-0 z-20 bg-white shadow-sm">
           <div className="container mx-auto px-6">
             <div className="flex justify-center overflow-x-auto py-4">
-              <div className="flex space-x-1">
+              <div className="flex space-x-1" role="tablist">
                 {sections.map((section) => (
                   <button
                     key={section.id}
                     onClick={() => setActiveSection(section.id)}
+                    role="tab"
+                    aria-selected={activeSection === section.id}
+                    aria-controls={`${section.id}-tab`}
+                    id={`${section.id}-btn`}
                     className={`flex items-center px-5 py-3 rounded-md transition-all ${activeSection === section.id 
                       ? 'bg-[#b73235] text-white shadow-md' 
                       : 'text-gray-700 hover:bg-gray-100 hover:text-[#b73235]'}`}
                   >
-                    <span className="mr-2 text-sm">{section.icon}</span>
+                    <span className="mr-2 text-sm" aria-hidden="true">{section.icon}</span>
                     <span className="whitespace-nowrap text-sm font-medium">{section.title}</span>
                   </button>
                 ))}
@@ -112,7 +147,7 @@ const AboutPage = () => {
           </div>
         </nav>
 
-        {/* Content Sections */}
+        {/* Content Sections with proper heading hierarchy */}
         <main className="container mx-auto px-6 py-16">
           <AnimatePresence mode="wait">
             {/* About Us Section */}
@@ -123,6 +158,9 @@ const AboutPage = () => {
                 animate="visible"
                 variants={staggerContainer}
                 className="grid lg:grid-cols-2 gap-16 items-center"
+                id="about-tab"
+                aria-labelledby="about-btn"
+                role="tabpanel"
               >
                 <motion.div variants={fadeIn}>
                   <div className="flex items-center mb-6">
@@ -148,26 +186,27 @@ const AboutPage = () => {
                       We operate across international markets including the USA, UK, Middle East, and UAE, serving as a strategic 
                       partner for businesses expanding globally.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <ul className="grid grid-cols-2 gap-4">
                       {['USA', 'UK', 'UAE', 'Middle East'].map((country) => (
-                        <div key={country} className="flex items-center">
+                        <li key={country} className="flex items-center">
                           <div className="w-2 h-2 bg-[#b73235] rounded-full mr-2"></div>
                           <span className="text-gray-700">{country}</span>
-                        </div>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </motion.div>
 
                 <motion.div variants={fadeIn} className="relative">
-                  <div className="relative overflow-hidden rounded-xl shadow-2xl">
+                  <figure className="relative overflow-hidden rounded-xl shadow-2xl">
                     <img 
                       src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                      alt="U-Link It Us team collaborating" 
+                      alt="U-Link It Us team collaborating in modern office" 
                       className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  </div>
+                  </figure>
                   <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-xl shadow-xl border-t-4 border-[#b73235]">
                     <div className="text-4xl font-bold text-[#b73235] mb-1">
                       {isMounted ? yearsExperience : '0'}+
@@ -186,6 +225,9 @@ const AboutPage = () => {
                 animate="visible"
                 variants={staggerContainer}
                 className="max-w-5xl mx-auto text-center"
+                id="mission-tab"
+                aria-labelledby="mission-btn"
+                role="tabpanel"
               >
                 <motion.div variants={fadeIn} className="mb-16">
                   <div className="flex justify-center mb-6">
@@ -243,6 +285,9 @@ const AboutPage = () => {
                 animate="visible"
                 variants={staggerContainer}
                 className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12 md:p-16"
+                id="vision-tab"
+                aria-labelledby="vision-btn"
+                role="tabpanel"
               >
                 <div className="max-w-4xl mx-auto text-center">
                   <motion.div variants={fadeIn} className="mb-12">
@@ -292,16 +337,20 @@ const AboutPage = () => {
                 animate="visible"
                 variants={staggerContainer}
                 className="grid lg:grid-cols-2 gap-16 items-center"
+                id="experience-tab"
+                aria-labelledby="experience-btn"
+                role="tabpanel"
               >
                 <motion.div variants={fadeIn} className="relative order-2 lg:order-1">
-                  <div className="relative overflow-hidden rounded-xl shadow-2xl">
+                  <figure className="relative overflow-hidden rounded-xl shadow-2xl">
                     <img 
                       src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                      alt="Our experienced team" 
+                      alt="Our experienced team at U-Link It Us headquarters" 
                       className="w-full h-auto object-cover"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  </div>
+                  </figure>
                   <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border-t-4 border-[#b73235]">
                     <div className="text-2xl font-bold text-gray-800">15+ Years</div>
                     <div className="text-gray-600">Industry Leadership</div>
@@ -361,6 +410,9 @@ const AboutPage = () => {
                 initial="hidden"
                 animate="visible"
                 variants={staggerContainer}
+                id="services-tab"
+                aria-labelledby="services-btn"
+                role="tabpanel"
               >
                 <motion.div variants={fadeIn} className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -424,6 +476,9 @@ const AboutPage = () => {
                 animate="visible"
                 variants={staggerContainer}
                 className="max-w-5xl mx-auto"
+                id="leadership-tab"
+                aria-labelledby="leadership-btn"
+                role="tabpanel"
               >
                 <motion.div variants={fadeIn} className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -438,12 +493,15 @@ const AboutPage = () => {
                 <motion.div variants={fadeIn} className="bg-white rounded-2xl shadow-xl overflow-hidden">
                   <div className="md:flex">
                     <div className="md:w-2/5 relative">
-                      <img 
-                        className="w-full h-full object-cover"
-                        src="/Images/2.webp" 
-                        alt="Dhiraj Kumar Gupta, Founder & Director" 
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent md:bg-gradient-to-r"></div>
+                      <figure>
+                        <img 
+                          className="w-full h-full object-cover"
+                          src="/Images/2.webp" 
+                          alt="Dhiraj Kumar Gupta, Founder & Director of U-Link It Us" 
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent md:bg-gradient-to-r"></div>
+                      </figure>
                     </div>
                     <div className="p-8 md:w-3/5">
                       <div className="uppercase tracking-wider text-sm text-[#b73235] font-semibold mb-2">
@@ -495,6 +553,9 @@ const AboutPage = () => {
                 initial="hidden"
                 animate="visible"
                 variants={staggerContainer}
+                id="partners-tab"
+                aria-labelledby="partners-btn"
+                role="tabpanel"
               >
                 <motion.div variants={fadeIn} className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -511,12 +572,13 @@ const AboutPage = () => {
                     <div className="bg-gray-100 p-6 rounded-full mb-8">
                       <img 
                         src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" 
-                        alt="Amazon" 
+                        alt="Amazon logo - U-Link It Us is an official Amazon partner" 
                         className="h-12"
+                        loading="lazy"
                       />
                     </div>
                     <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-                      Official Amazon Global Selling  Partner
+                      Official Amazon Global Selling Partner
                     </h3>
                     <p className="text-gray-600 mb-8 text-center leading-relaxed">
                       As Amazon's trusted partner for pan-India business development, we spearhead seller education programs 
@@ -694,16 +756,17 @@ const PartnerCard = ({ region, description, countries }) => {
     >
       <div className="text-3xl font-bold text-[#b73235] mb-4 text-center">{region}</div>
       <p className="text-gray-600 mb-6 text-center">{description}</p>
-      <div className="flex flex-wrap justify-center gap-2">
+      <ul className="flex flex-wrap justify-center gap-2">
         {countries.map((country, index) => (
-          <span 
-            key={index}
-            className="bg-[#b73235]/10 text-[#b73235] px-3 py-1 rounded-full text-sm font-medium"
-          >
-            {country}
-          </span>
+          <li key={index}>
+            <span 
+              className="bg-[#b73235]/10 text-[#b73235] px-3 py-1 rounded-full text-sm font-medium"
+            >
+              {country}
+            </span>
+          </li>
         ))}
-      </div>
+      </ul>
     </motion.div>
   );
 };
