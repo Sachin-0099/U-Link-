@@ -9,7 +9,7 @@ const BlogPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [showSubmissionForm, setShowSubmissionForm] = useState(false);
   const [newPost, setNewPost] = useState({
     title: '',
@@ -34,7 +34,7 @@ const BlogPage = () => {
       "title": "Ulinkitus.com Seller Account Management Program",
       "content": "<p>Ulinkitus.com is one of India’s fastest-growing companies providing IT & e-commerce solutions. We are partnered with Amazon to help sellers manage their accounts and boost their online business performance. Our program offers comprehensive services like inventory management, sales management, and sales boost strategies to ensure your account remains in top health.</p><p>In this program, we cover the following:</p><ul><li>Inventory Management</li><li>Sales Management</li><li>Order Management</li><li>Reviews & Ratings Management</li><li>Account Health Management</li><li>Buyer-Seller Communication</li><li>Sales Boost</li></ul>",
       "excerpt": "Ulinkitus.com provides a comprehensive Seller Account Management Program, including inventory, sales, order, and review management to boost your Amazon business.",
-      "featuredImage": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "featuredImage": "/Images/AccountM.avif",
       "category": "Account Management",
       "publishedAt": "2024-01-01T00:00:00Z",
       "readTime": "7 min",
@@ -48,7 +48,7 @@ const BlogPage = () => {
       "title": "Sales Boost Strategy for Amazon Sellers",
       "content": "<p>Our Sales Boost strategy is designed to help Amazon sellers achieve greater visibility and success on the platform. It includes listing enhancement, sponsored products, and managing reviews & ratings to ensure your products get noticed and perform well.</p><p>The strategy includes the following steps:</p><ol><li>Listing Enhancement: Optimize listings with images, keywords, bullet points, and detailed descriptions.</li><li>Sponsored Products: Run ad campaigns with a daily budget to boost visibility.</li><li>Reviews and Ratings: Maintain high reviews and ratings to improve product rankings and sales.</li></ol>",
       "excerpt": "Our Sales Boost strategy enhances your Amazon listings, runs targeted ads, and maintains high reviews to increase product visibility and sales.",
-      "featuredImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "featuredImage": "/Images/Sales.avif",
       "category": "Sales Boost",
       "publishedAt": "2024-01-02T12:00:00Z",
       "readTime": "6 min",
@@ -62,7 +62,7 @@ const BlogPage = () => {
       "title": "Account Health Management for Amazon Sellers",
       "content": "<p>Maintaining account health is crucial for continued success on Amazon. Our Account Health Management service ensures that your account stays in good standing by monitoring key metrics such as ODR, LSR, and CR, and addressing any negative feedback or claims promptly.</p><p>Our service includes:</p><ul><li>Monitoring Order Defect Ratio (ODR), Late Shipment Ratio (LSR), and Cancellation Ratio (CR).</li><li>Handling Negative Feedback and A-Z Claims.</li><li>Ensuring adherence to Amazon’s policies and avoiding account suspensions.</li></ul>",
       "excerpt": "Our Account Health Management service helps Amazon sellers maintain a healthy account by managing key metrics and handling negative feedback and claims.",
-      "featuredImage": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "featuredImage": "/Images/AccountH.avif",
       "category": "Account Health",
       "publishedAt": "2024-01-03T09:00:00Z",
       "readTime": "8 min",
@@ -77,7 +77,7 @@ const BlogPage = () => {
       "title": "Best Practices for Inventory Management on Amazon",
       "content": "<p>Inventory management is crucial for maintaining a smooth Amazon seller account. Our program helps you efficiently manage your inventory to ensure stock levels are optimal, preventing stockouts or excess stock. We offer advanced tools for syncing inventory across multiple platforms.</p><p>Key Practices include:</p><ul><li>Real-time stock monitoring and alerts</li><li>Synchronizing inventory across marketplaces</li><li>Optimizing stock levels based on sales velocity</li><li>Preventing overselling with automated reorder alerts</li></ul>",
       "excerpt": "Our Inventory Management service helps you optimize stock levels, preventing stockouts and excess stock, and keeping your account in top shape.",
-      "featuredImage": "https://images.unsplash.com/photo-1588233209265-f26c314db34d?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDJ8fGluZ2VuaW91c3xlbnwwfHx8fDE2NjAyODgxNzY&ixlib=rb-1.2.1&q=80&w=1080",
+      "featuredImage": "/Images/Inventory.avif",
       "category": "Inventory Management",
       "publishedAt": "2024-01-04T08:00:00Z",
       "readTime": "6 min",
@@ -91,7 +91,7 @@ const BlogPage = () => {
       "title": "Streamlining Order Management for Amazon Sellers",
       "content": "<p>Our Order Management System (OMS) ensures timely dispatch and accurate tracking of your orders. We work closely with your team to monitor the status of each order and resolve any issues that arise during processing, preventing late shipments and maintaining a high level of customer satisfaction.</p><p>Our OMS includes:</p><ul><li>Automated order processing and tracking</li><li>Real-time order status updates</li><li>Order prioritization based on urgency</li><li>Integration with third-party logistics providers</li></ul>",
       "excerpt": "Our Order Management System ensures timely dispatch and tracking of orders, preventing late shipments and improving customer satisfaction.",
-      "featuredImage": "https://images.unsplash.com/photo-1627294284943-b50d520f5b13?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDJ8fG9yZGVycyUyMGZvb2QlMjBwb2Nlc3xlbnwwfHx8fDE2NjAyODgxNzY&ixlib=rb-1.2.1&q=80&w=1080",
+      "featuredImage": "/Images/Order.avif",
       "category": "Order Management",
       "publishedAt": "2024-01-05T07:00:00Z",
       "readTime": "5 min",
@@ -105,7 +105,7 @@ const BlogPage = () => {
       "title": "Effective Strategy for Managing Reviews & Ratings on Amazon",
       "content": "<p>Reviews and ratings are vital for the success of your products on Amazon. Our strategy helps you maintain a high average rating by addressing customer feedback and ensuring that your products are meeting customer expectations.</p><p>Our strategy includes:</p><ul><li>Monitoring and responding to customer reviews</li><li>Resolving issues with low-rated reviews</li><li>Using customer feedback to improve products</li><li>Ensuring compliance with Amazon’s review guidelines</li></ul>",
       "excerpt": "Our strategy for managing reviews and ratings ensures high customer satisfaction and helps maintain your product’s ranking on Amazon.",
-      "featuredImage": "https://images.unsplash.com/photo-1601345203481-697c6fdd8b52?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDIwfHByb2R1Y3R8ZW58MHx8fHwxNjYwMjg4MTc2&ixlib=rb-1.2.1&q=80&w=1080",
+      "featuredImage": "/Images/reviews.avif",
       "category": "Reviews & Ratings Management",
       "publishedAt": "2024-01-06T10:00:00Z",
       "readTime": "7 min",
@@ -119,7 +119,7 @@ const BlogPage = () => {
       "title": "Analyzing Sales Performance for Amazon Sellers",
       "content": "<p>Our Sales Performance Analysis service helps you understand how your products are performing on Amazon. By analyzing key performance metrics such as conversion rates, average order value, and traffic sources, we provide insights to optimize your strategy for better sales results.</p><p>Our analysis includes:</p><ul><li>Reviewing conversion rates and identifying improvement areas</li><li>Tracking traffic sources and optimizing for high-converting channels</li><li>Analyzing pricing strategies and their impact on sales</li><li>Recommending new strategies based on sales data</li></ul>",
       "excerpt": "Our Sales Performance Analysis service helps you optimize your Amazon sales strategy by providing detailed insights into performance metrics.",
-      "featuredImage": "https://images.unsplash.com/photo-1589445922082-3d82d720d9a4?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDJ8fHNhbGVzJTIwZGV0YWlsc3xlbnwwfHx8fDE2NjAyODgxNzY&ixlib=rb-1.2.1&q=80&w=1080",
+      "featuredImage": "/Images/analysis.avif",
       "category": "Sales Analysis",
       "publishedAt": "2024-01-07T11:00:00Z",
       "readTime": "6 min",
@@ -157,7 +157,7 @@ const BlogPage = () => {
   useEffect(() => {
     let results = posts;
     
-    if (selectedCategory !== 'All') {
+    if (selectedCategory && selectedCategory !== 'All') {
       results = results.filter(post => post.category === selectedCategory);
     }
     
@@ -301,16 +301,18 @@ const BlogPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>Ulinkitus Blog | Latest Articles on URL Shortening and Digital Marketing</title>
-        <meta 
-          name="description" 
-          content="Explore the Ulinkitus blog for insights on URL shortening, link management, digital marketing strategies, and online business growth." 
-        />
-        <meta property="og:title" content="Ulinkitus Blog | Latest Articles on URL Shortening" />
-        <meta property="og:description" content="Insights on URL shortening, link management, and digital marketing strategies." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ulinkitus.com/blog" />
-      </Helmet>
+  <title>Ulinkitus Blog | Expert Seller Account Management & Marketplace Performance</title>
+
+  <meta 
+    name="description" 
+    content="Explore the Ulinkitus blog for expert insights on seller account management, marketplace performance, digital marketing strategies, and e-commerce growth." 
+  />
+  <meta property="og:title" content="Ulinkitus Blog | Expert Seller Account Management & Marketplace Performance" />
+  <meta property="og:description" content="Gain insights on maximizing marketplace performance, e-commerce strategies, and effective seller account management." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://ulinkitus.com/blog" />
+</Helmet>
+
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
@@ -320,8 +322,9 @@ const BlogPage = () => {
             U-Link It Us Blog
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights on URL shortening, digital marketing, and online growth strategies
-          </p>
+  Discover expert insights on seller account management, marketplace performance, and effective e-commerce growth strategies.
+</p>
+
           
           <div className="flex justify-center gap-4 my-8">
             <button 
