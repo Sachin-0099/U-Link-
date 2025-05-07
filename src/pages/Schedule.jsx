@@ -35,18 +35,23 @@ const Schedule = () => {
 
   const contactMethods = [
     {
-      title: "India Phone",
+      title: "Whatsapp",
       icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92H19C18.45 20.92 18 20.47 18 19.92V16.92C18 16.37 18.45 15.92 19 15.92H21C21.55 15.92 22 16.37 22 16.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M16 3.92H8C4 3.92 2 5.92 2 9.92V15.92C2 19.92 4 21.92 8 21.92H16C20 21.92 22 19.92 22 15.92V9.92C22 5.92 20 3.92 16 3.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M13 7.92H15" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M6 7.92H11" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M6 11.92H13" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path 
+          d="M16 3C9.37 3 4 8.37 4 15C4 17.44 4.79 19.7 6.13 21.58L4 29L11.09 26.03C12.94 26.65 14.92 27 17 27C23.63 27 29 21.63 29 15C29 8.37 23.63 3 17 3H16ZM16 25C14.18 25 12.46 24.61 10.91 23.91L10.5 23.72L7.05 25.1L8.4 21.56L8.13 21.14C6.89 19.37 6.2 17.25 6.2 15C6.2 9.48 10.48 5.2 16 5.2C21.52 5.2 25.8 9.48 25.8 15C25.8 20.52 21.52 24.8 16 24.8V25Z"
+          fill="#25D366"
+        />
+        <path 
+          d="M21.54 18.71L19.79 17.78C19.55 17.66 19.28 17.69 19.08 17.85L18.21 18.61C16.38 17.72 15.04 16.37 14.15 14.54L14.91 13.67C15.1 13.47 15.13 13.2 15.01 12.96L14.08 11.21C13.91 10.87 13.49 10.75 13.16 10.91C11.97 11.45 11.2 12.47 11.2 13.6C11.2 13.73 11.22 13.86 11.24 14C11.82 17.68 14.79 20.65 18.47 21.23C18.61 21.25 18.74 21.27 18.87 21.27C20 21.27 21.02 20.5 21.56 19.31C21.72 18.97 21.6 18.55 21.26 18.39L21.54 18.71Z"
+          fill="#25D366"
+        />
+      </svg>
+      
+
       ),
       contact: "+91 8750518844",
-      href: "tel:+918750518844"
+      href: "https://wa.me/918750518844?text=Hello%20I%20am%20interested%20in%20your%20services"
     },
     {
       title: "UAE Phone",
@@ -62,21 +67,7 @@ const Schedule = () => {
       contact: "+971 58 586 8470",
       href: "tel:+971585868470"
     },
-   
-    {
-      title: "Whatsapp",
-      icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92H19C18.45 20.92 18 20.47 18 19.92V16.92C18 16.37 18.45 15.92 19 15.92H21C21.55 15.92 22 16.37 22 16.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M16 3.92H8C4 3.92 2 5.92 2 9.92V15.92C2 19.92 4 21.92 8 21.92H16C20 21.92 22 19.92 22 15.92V9.92C22 5.92 20 3.92 16 3.92Z" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M13 7.92H15" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M6 7.92H11" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M6 11.92H13" stroke="#3182ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
-      contact: "+91 8750518844",
-      href: "https://wa.me/918750518844?text=Hello%20I%20am%20interested%20in%20your%20services"
-    }
+
     
   ];
 
