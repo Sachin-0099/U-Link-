@@ -170,10 +170,12 @@ const MissionVisionSection = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1 }}
                 >
-                  <motion.button
+                  <a href="/aboutus">
+                  <motion.button 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-3 bg-white text-gray-900 font-medium rounded-lg flex items-center gap-2"
+                  
                   >
                     Learn more
                     <motion.span
@@ -186,6 +188,8 @@ const MissionVisionSection = () => {
                       →
                     </motion.span>
                   </motion.button>
+                  </a>
+                  
                 </motion.div>
               </div>
             </motion.div>

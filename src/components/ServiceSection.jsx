@@ -363,20 +363,26 @@ const ServicesSection = () => {
               Need a custom solution for your business?
             </h3>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-              <motion.button
-                whileHover={{ scale: 1.02, boxShadow: "0 4px 12px rgba(183, 50, 53, 0.3)" }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-[#b73235] hover:bg-[#9c2a2d] text-white font-semibold py-2 sm:py-3 px-6 rounded-lg text-base sm:text-lg transition-all"
-              >
-                Contact Our Experts
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-white text-[#b73235] font-semibold py-2 sm:py-3 px-6 rounded-lg text-base sm:text-lg border border-[#b73235] transition-all"
-              >
-                View Case Studies
-              </motion.button>
+            <a href="mailto:dhiraj@ulinkit.com?subject=Need%20Help%20with%20Amazon%20Selling&body=Hi%20U-Link It Us%2C%0A%0AI%27m%20interested%20in%20your%20services%20for%20managing%20my%20seller%20account.%20Please%20get%20in%20touch%20with%20me.%0A%0AThanks%2C">
+  <motion.button
+    whileHover={{ scale: 1.02, boxShadow: "0 4px 12px rgba(183, 50, 53, 0.3)" }}
+    whileTap={{ scale: 0.98 }}
+    className="bg-[#b73235] hover:bg-[#9c2a2d] text-white font-semibold py-2 sm:py-3 px-6 rounded-lg text-base sm:text-lg transition-all"
+  >
+    Contact Our Experts
+  </motion.button>
+</a>
+
+
+<motion.button
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.98 }}
+  disabled
+  className="bg-white text-[#b73235] font-semibold py-2 sm:py-3 px-6 rounded-lg text-base sm:text-lg border border-[#b73235] transition-all opacity-50 cursor-not-allowed"
+>
+  Case Studies Coming Soon
+</motion.button>
+
             </div>
           </motion.div>
         </div>

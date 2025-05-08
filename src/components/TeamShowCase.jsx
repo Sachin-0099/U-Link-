@@ -2,32 +2,34 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const teamMembers = [
+
   {
     id: 1,
-    name: 'Vineet Sharma',
-    position: 'IT HEAD Director',
-    bio: 'U-Link IT US provides consistent product quality and excellent customer service to ensure complete satisfaction.',
-    image: '/Images/6.webp',
-    blobColor: 'bg-[#f5f5f5]',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/mansi-ramola-b3b5b631b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      twitter: '#',
-      email: '#'
-    }
-  },
-  {
-    id: 2,
     name: 'Dhiraj Kumar Gupta',
     position: 'Chairman',
     bio: 'U-Link IT US is an awesome place to work with a focus on innovation and employee growth.',
     image: '/Images/2.webp',
     blobColor: 'bg-[#f9dcdc]',
     social: {
-      linkedin: '#',
-      twitter: '#',
-      email: '#'
+      linkedin: 'https://www.linkedin.com/in/dhiraj-kumar-gupta-45b97730/',
+      twitter: 'https://x.com/dhirajkgupta84',
+      email: 'dhiraj@ulinkit.com'
     }
   },
+  {
+    id: 2,
+    name: 'Vineet Sharma',
+    position: 'IT HEAD Director',
+    bio: 'U-Link IT US provides consistent product quality and excellent customer service to ensure complete satisfaction.',
+    image: '/Images/6.webp',
+    blobColor: 'bg-[#f5f5f5]',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/vineet-sharma-2663279/',
+      twitter: '#',
+      email: 'support@ulinkit.com'
+    }
+  },
+  
 ];
 
 const TeamShowcase = () => {
