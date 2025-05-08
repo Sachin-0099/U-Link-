@@ -7,7 +7,164 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 
+const partners = [
+  {
+    name: "Official Amazon Global Selling Partner",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    description:
+      "As an official Amazon Global Selling Partner, we enable Indian brands to launch, manage, and scale their business across Amazon's international marketplaces with hands-on expertise and strategic support.",
+    benefits: [
+      "Global store setup and optimization",
+      "Account health and policy compliance guidance",
+      "Marketplace expansion roadmap",
+      "Cross-border logistics consulting",
+      "Amazon advertising strategy support",
+      "Seller growth analytics & reporting",
+    ],
+  },
+  {
+    name: "Ulinkit eCommerce Expansion Partner",
+    logo: "/Images/Ulinkit.png",
+    description:
+      "Ulinkit empowers Indian sellers with borderless growth opportunities by providing cutting-edge tools and services for seamless international commerce across various platforms.",
+    benefits: [
+      "Multi-marketplace integration",
+      "Product catalog optimization",
+      "Localized onboarding assistance",
+      "AI-powered pricing intelligence",
+      "Inventory and logistics coordination",
+      "Dedicated account success managers",
+    ],
+  },
+  {
+    name: "Tredling eCommerce Expansion Partner",
+    logo: "/Images/tredling.png",
+    description:
+      "Tredling connects exporters with top eCommerce markets, offering digital trade infrastructure that simplifies B2B and B2C global distribution.",
+    benefits: [
+      "Export compliance and documentation support",
+      "Access to B2B buyer networks",
+      "Integrated trade finance solutions",
+      "Market-specific sales enablement",
+      "International payment facilitation",
+      "Real-time shipment visibility",
+    ],
+  },
+  {
+    name: "noon eCommerce Expansion Partner",
+    logo: "/Images/noon1.png",
+    description:
+      "We work with noon to enable product localization, fulfillment, and brand marketing for Indian sellers targeting the Middle East's fastest-growing digital marketplace.",
+    benefits: [
+      "Product listing translation and localization",
+      "Cross-border FBN (Fulfilled by noon) setup",
+      "Regional influencer marketing tie-ups",
+      "Noon promotional campaign access",
+      "Local currency pricing and settlement",
+      "Performance and conversion tracking",
+    ],
+  },
+  {
+    name: "Amazon SPN Partner (Service Provider Network)",
+    logo: "/Images/amazonspn.png",
+    description:
+      "Through Amazon’s SPN program, we offer sellers verified solutions for cataloging, imaging, advertising, and operational support tailored to marketplace performance goals.",
+    benefits: [
+      "SPN-verified service portfolio",
+      "Listing creation and enhancement",
+      "Sponsored Ads campaign management",
+      "High-conversion product imaging",
+      "Training workshops and certifications",
+      "Automated reporting and insights",
+    ],
+  },
+  {
+    name: "DP World Cross-Border Logistics Partner",
+    logo: "/Images/Logo New.svg",
+    description:
+      "DP World is our strategic logistics partner providing fast, reliable, and scalable global shipping and fulfillment services designed for ecommerce exports.",
+    benefits: [
+      "Warehouse and fulfillment integration",
+      "Customs clearance and compliance",
+      "Bulk shipping consolidation",
+      "Cross-border courier partnerships",
+      "Smart inventory management",
+      "End-to-end supply chain visibility",
+    ],
+  },
+  {
+    name: "Souq Legacy Marketplace Partner",
+    logo: "/Images/souq.png",
+    description:
+      "As Souq transitions to Amazon, we continue to support merchants who originally launched on Souq with legacy migration, catalog updates, and account preservation strategies.",
+    benefits: [
+      "Account migration to Amazon.ae",
+      "Listing and catalog data transfer",
+      "Legacy product data optimization",
+      "Continuity in sales performance tracking",
+      "Migration support and documentation",
+      "Customer review and rating transition",
+    ],
+  },
+  {
+    name: "Amazon.co.uk Marketplace Expansion Partner",
+    logo: "/Images/amazonco.png",
+    description:
+      "We help Indian sellers expand into Amazon UK, with a full-stack solution for compliance, VAT registration, and localized fulfillment strategies.",
+    benefits: [
+      "UK VAT registration and support",
+      "Product compliance documentation",
+      "FBA UK and pan-EU fulfillment setup",
+      "Currency exchange and remittance help",
+      "Localized marketing assets",
+      "Sales tax and invoicing automation",
+    ],
+  },
+  {
+    name: "Amazon.ae Growth Partner",
+    logo: "/Images/amazonae.png",
+    description:
+      "We facilitate entry and scale-up on Amazon UAE with local compliance, logistics partnerships, and cultural alignment for product positioning.",
+    benefits: [
+      "Arabic content localization",
+      "UAE-specific product keyword optimization",
+      "Local fulfillment and returns support",
+      "Hyper-local ad campaign setup",
+      "UAE customer insights and feedback loops",
+      "Local laws and customs compliance",
+    ],
+  },
+  {
+    name: "Amazon.sa Growth Partner",
+    logo: "/Images/amazonsa1.png",
+    description:
+      "Our team empowers sellers to tap into Saudi Arabia’s rapidly growing digital economy with expert support for product-market fit, cultural targeting, and in-region fulfillment.",
+    benefits: [
+      "Saudi localization strategies",
+      "Product eligibility checks and approval",
+      "In-country delivery network setup",
+      "Ramadan and cultural campaign planning",
+      "End-user behavior analytics",
+      "Customer support and SLA compliance",
+    ],
+  },
+];
+
+
+
 const AboutPage = () => {
+  const [activePartner, setActivePartner] = useState(0);
+
+const AutoRotateCarousel = ({ items, activeIndex, setActiveIndex, interval = 5000 }) => {
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex(prev => (prev === items.length - 1 ? 0 : prev + 1));
+    }, interval);
+    return () => clearInterval(timer);
+  }, [items.length, interval, setActiveIndex]);
+
+  return null;
+};
   const [activeSection, setActiveSection] = useState('about');
   const [yearsExperience, setYearsExperience] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
@@ -183,11 +340,11 @@ const AboutPage = () => {
                   <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#b73235]">
                     <h4 className="text-xl font-semibold mb-4 text-gray-800">Global Business Aggregator</h4>
                     <p className="text-gray-600 mb-4">
-                      We operate across international markets including the USA, UK, Middle East, and UAE, serving as a strategic 
+                      We operate across international markets including the USA, UK, Middle East, and UAE and Other Gulf Countries serving as a strategic 
                       partner for businesses expanding globally.
                     </p>
                     <ul className="grid grid-cols-2 gap-4">
-                      {['USA', 'UK', 'UAE', 'Middle East'].map((country) => (
+                      {['USA', 'UK', 'UAE', 'Other Gulf Countries'].map((country) => (
                         <li key={country} className="flex items-center">
                           <div className="w-2 h-2 bg-[#b73235] rounded-full mr-2"></div>
                           <span className="text-gray-700">{country}</span>
@@ -200,7 +357,7 @@ const AboutPage = () => {
                 <motion.div variants={fadeIn} className="relative">
                   <figure className="relative overflow-hidden rounded-xl shadow-2xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                      src="/Images/Order.avif" 
                       alt="U-Link It Us team collaborating in modern office" 
                       className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
                       loading="lazy"
@@ -268,7 +425,7 @@ const AboutPage = () => {
                       whileHover={{ y: -8 }}
                       className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-[#b73235]"
                     >
-                      <div className="text-[#b73235] mb-5">{item.icon}</div>
+                      <div className="text-[#b73235] mb-5 flex justify-center">{item.icon}</div>
                       <h3 className="text-xl font-semibold mb-3 text-gray-800">{item.title}</h3>
                       <p className="text-gray-600">{item.description}</p>
                     </motion.div>
@@ -306,14 +463,46 @@ const AboutPage = () => {
 
                   <motion.div variants={staggerContainer} className="grid md:grid-cols-2 gap-8 text-left">
                     {[
-                      {
-                        title: 'Business 2025 Initiative',
-                        description: 'Our strategic roadmap is transforming global business operations through digital innovation and expanded market access.'
-                      },
-                      {
-                        title: 'Universal Business Platform',
-                        description: 'Developing an integrated ecosystem that connects industry players worldwide with seamless communication tools.'
-                      }
+                      
+                        {
+                          title: 'SP-API & SPP ',
+                          description: 'Driving the future of e-commerce by leveraging Amazon SP-API to automate operations, streamline seller management, and lead the transformation to the new Selling Partner Platform (SPP) era.'
+                        },
+                        {
+                          title: 'Business 2025 Initiative',
+                          description: 'Our strategic roadmap is transforming global business operations through digital innovation and expanded market access.'
+                        },
+                        {
+                          title: 'Universal Business Platform',
+                          description: 'Developing an integrated ecosystem that connects industry players worldwide with seamless communication tools.'
+                        },
+                       
+                        {
+                          title: 'AI-Powered Business Intelligence',
+                          description: 'Implementing AI solutions to deliver predictive analytics, intelligent recommendations, and performance insights for global sellers.'
+                        },
+                        {
+                          title: 'Global Trade Automation',
+                          description: 'Building tools to automate procurement, compliance, and payment flows for cross-border trade.'
+                        },
+                        {
+                          title: 'Seller Success Ecosystem',
+                          description: 'Creating a full-service ecosystem that supports sellers from onboarding to growth with expert-driven, tech-supported solutions.'
+                        },
+                        {
+                          title: 'Cloud-First Architecture',
+                          description: 'Migrating core infrastructure to a scalable cloud environment to ensure speed, security, and global availability.'
+                        },
+                        {
+                          title: 'Multi-Marketplace Expansion',
+                          description: 'Expanding seller access to new marketplaces beyond Amazon, including Walmart, eBay, Noon, and regional B2B hubs.'
+                        },
+                        {
+                          title: 'End-to-End Logistics Innovation',
+                          description: 'Integrating smart warehousing, real-time tracking, and last-mile delivery partnerships into our logistics services.'
+                        }
+                      
+                      
                     ].map((item, index) => (
                       <motion.div 
                         key={index}
@@ -429,7 +618,7 @@ const AboutPage = () => {
                     {
                       icon: <FaGlobe className="text-3xl" />,
                       title: "Global Expansion",
-                      description: "Facilitating business growth in international markets including USA, UK, and Middle East"
+                      description: "Facilitating business growth in international markets including USA, UK, and Middle East and Other Gulf Countries"
                     },
                     {
                       icon: <FaShieldAlt className="text-3xl" />,
@@ -547,97 +736,153 @@ const AboutPage = () => {
             )}
 
             {/* Partners Section */}
-            {activeSection === 'partners' && (
-              <motion.section
-                key="partners"
-                initial="hidden"
-                animate="visible"
-                variants={staggerContainer}
-                id="partners-tab"
-                aria-labelledby="partners-btn"
-                role="tabpanel"
-              >
-                <motion.div variants={fadeIn} className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                    Strategic Global Partnerships
-                  </h2>
-                  <div className="w-24 h-1 bg-[#b73235] mx-auto mb-6"></div>
-                  <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Collaborating with industry leaders to deliver exceptional value
-                  </p>
-                </motion.div>
+            {/* Partners Section */}
+{/* Partners Section - Auto-Sliding Carousel */}
+{activeSection === 'partners' && (
+  <motion.section
+    key="partners"
+    initial="hidden"
+    animate="visible"
+    variants={staggerContainer}
+    id="partners-tab"
+    aria-labelledby="partners-btn"
+    role="tabpanel"
+  >
+    <motion.div variants={fadeIn} className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Strategic Global Partnerships
+      </h2>
+      <div className="w-24 h-1 bg-[#b73235] mx-auto mb-6"></div>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Collaborating with industry leaders to deliver exceptional value
+      </p>
+    </motion.div>
 
-                <motion.div variants={fadeIn} className="bg-white rounded-2xl shadow-md p-8 md:p-12 max-w-4xl mx-auto mb-16">
-                  <div className="flex flex-col items-center">
-                    <div className="bg-gray-100 p-6 rounded-full mb-8">
-                      <img 
-                        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" 
-                        alt="Amazon logo - U-Link It Us is an official Amazon partner" 
-                        className="h-12"
-                        loading="lazy"
-                      />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-                      Official Amazon Global Selling Partner
-                    </h3>
-                    <p className="text-gray-600 mb-8 text-center leading-relaxed">
-                      As Amazon's trusted partner for pan-India business development, we spearhead seller education programs 
-                      that empower thousands of merchants to establish and grow their digital storefronts on the world's 
-                      largest e-commerce platform.
-                    </p>
-                    <div className="w-full bg-gray-50 rounded-lg p-6">
-                      <h4 className="font-semibold text-lg text-gray-800 mb-4">Partnership Advantages:</h4>
-                      <ul className="grid md:grid-cols-2 gap-4">
-                        {[
-                          "Priority access to Amazon's seller network",
-                          "Exclusive training and certification programs",
-                          "Dedicated support for seller onboarding",
-                          "Early adoption of new marketplace features",
-                          "Customized business growth strategies",
-                          "Performance analytics and optimization"
-                        ].map((item, index) => (
-                          <li key={index} className="flex items-start">
-                            <div className="bg-[#b73235] rounded-full p-1 mr-3 mt-1 flex-shrink-0">
-                              <svg className="w-2 h-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                              </svg>
-                            </div>
-                            <span className="text-gray-700">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </motion.div>
+    {/* Carousel Container */}
+    <div className="relative max-w-4xl mx-auto overflow-hidden">
+      {/* Carousel Track */}
+      <div className="relative h-[600px]">
+        {partners.map((partner, index) => (
+          <motion.div
+            key={index}
+            className="absolute inset-0 flex items-center justify-center px-4"
+            initial={{ opacity: 0, x: index === 0 ? 0 : 100 }}
+            animate={{ 
+              opacity: activePartner === index ? 1 : 0,
+              x: activePartner === index ? 0 : (index < activePartner ? -100 : 100)
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-2xl">
+              <div className="flex flex-col items-center">
+                <div className="bg-gray-100 p-6 rounded-full mb-8">
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`} 
+                    className="h-12 max-w-[180px] object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                  {partner.name}
+                </h3>
+                <p className="text-gray-600 mb-8 text-center leading-relaxed">
+                  {partner.description}
+                </p>
+                <div className="w-full bg-gray-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-lg text-gray-800 mb-4">Partnership Advantages:</h4>
+                  <ul className="grid md:grid-cols-2 gap-4">
+                    {partner.benefits.map((item, i) => (
+                      <li key={i} className="flex items-start">
+                        <div className="bg-[#b73235] rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                          <svg className="w-2 h-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-700">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
-                <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-8">
-                  {[
-                    {
-                      region: "North America",
-                      description: "Strategic alliances with leading technology and e-commerce firms across the United States",
-                      countries: ["USA", "Canada"]
-                    },
-                    {
-                      region: "Europe",
-                      description: "Collaborations with procurement specialists and logistics providers throughout the UK and EU",
-                      countries: ["UK", "Germany", "France"]
-                    },
-                    {
-                      region: "Middle East",
-                      description: "Established network of trade partners and business aggregators in key Gulf markets",
-                      countries: ["UAE", "Saudi Arabia", "Qatar"]
-                    }
-                  ].map((item, index) => (
-                    <PartnerCard 
-                      key={index}
-                      region={item.region}
-                      description={item.description}
-                      countries={item.countries}
-                    />
-                  ))}
-                </motion.div>
-              </motion.section>
-            )}
+      {/* Navigation Arrows */}
+      <button 
+        onClick={() => setActivePartner(prev => (prev === 0 ? partners.length - 1 : prev - 1))}
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors z-10"
+        aria-label="Previous partner"
+      >
+        <svg className="w-6 h-6 text-[#b73235]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button 
+        onClick={() => setActivePartner(prev => (prev === partners.length - 1 ? 0 : prev + 1))}
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors z-10"
+        aria-label="Next partner"
+      >
+        <svg className="w-6 h-6 text-[#b73235]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Dots Indicator */}
+      <div className="flex justify-center mt-8 space-x-2">
+        {partners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActivePartner(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${activePartner === index ? 'bg-[#b73235]' : 'bg-gray-300 hover:bg-[#b73235]/50'}`}
+            aria-label={`Go to partner ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+
+    {/* Auto-rotation effect (optional) */}
+    <AutoRotateCarousel 
+      items={partners} 
+      activeIndex={activePartner}
+      setActiveIndex={setActivePartner}
+      interval={5000}
+    />
+
+    {/* Regional Partners Grid */}
+    <motion.div 
+      variants={staggerContainer} 
+      className="grid md:grid-cols-3 gap-8 mt-16"
+    >
+      {[
+        {
+          region: "North America",
+          description: "Strategic alliances with leading technology and e-commerce firms across the United States",
+          countries: ["USA", "Canada"]
+        },
+        {
+          region: "Europe",
+          description: "Collaborations with procurement specialists and logistics providers throughout the UK and EU",
+          countries: ["UK", "Germany", "France"]
+        },
+        {
+          region: "Middle East",
+          description: "Established network of trade partners and business aggregators in key Gulf markets",
+          countries: ["UAE", "Saudi Arabia", "Qatar"]
+        }
+      ].map((item, index) => (
+        <PartnerCard 
+          key={index}
+          region={item.region}
+          description={item.description}
+          countries={item.countries}
+        />
+      ))}
+    </motion.div>
+  </motion.section>
+)}
           </AnimatePresence>
         </main>
 
@@ -708,12 +953,16 @@ const AboutPage = () => {
                 specific business requirements and market objectives.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="bg-[#b73235] hover:bg-[#9c2a2d] text-white font-semibold py-3 px-8 rounded-md text-lg transition-colors shadow-lg">
+               <a href="/contact">
+               <button className="bg-[#b73235] hover:bg-[#9c2a2d] text-white font-semibold py-3 px-8 rounded-md text-lg transition-colors shadow-lg">
                   Contact Our Team
                 </button>
-                <button className="bg-white hover:bg-gray-100 text-[#b73235] font-semibold py-3 px-8 rounded-md text-lg transition-colors shadow-lg">
+               </a>
+              <a href="/services">
+              <button className="bg-white hover:bg-gray-100 text-[#b73235] font-semibold py-3 px-8 rounded-md text-lg transition-colors shadow-lg">
                   Explore Services
                 </button>
+              </a>
               </div>
             </motion.div>
           </div>
