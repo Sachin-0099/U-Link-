@@ -17,7 +17,7 @@ function Navbar() {
 
         {/* Desktop Menu - Only shows on large screens (lg and above) */}
         <ul className="hidden lg:flex items-center gap-6 text-[#2b2b2b] font-medium">
-        {['Home', 'About Us', 'Services', 'Portfolio', 'Blog'].map((item) => (
+        {['Home', 'About-Us', 'Services', 'Portfolio', 'Blog'].map((item) => (
   <li key={item} className="cursor-pointer hover:text-[#b73235] transition">
     <Link to={`/${item.toLowerCase().replace(/ /g, '')}`}>{item}</Link>
   </li>
@@ -50,7 +50,7 @@ function Navbar() {
   {/* Mobile Dropdown Menu - Shows on screens smaller than lg */}
 {isMenuOpen && (
   <div className="lg:hidden bg-white shadow-md px-6 py-4 space-y-4 text-[#2b2b2b] font-medium">
-    {['Home', 'About Us', 'Services', 'Portfolio', 'Blog'].map((item) => (
+    {['Home', 'About-Us', 'Services', 'Portfolio', 'Blog'].map((item) => (
       <Link
         key={item}
         to={`/${item.toLowerCase().replace(/ /g, '')}`}
