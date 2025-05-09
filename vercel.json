@@ -1,9 +1,5 @@
 {
-  "redirects": [
-    {
-      "source": "/about-us",
-      "destination": "/aboutus",
-      "permanent": true
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
