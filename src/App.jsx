@@ -12,11 +12,13 @@ import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Schedule from './pages/Schedule';
 import NotFound from './pages/NotFound';
+import CustomCursor from './components/CustomCursor'; // Import CustomCursor
 
 function App() {
   return (
     <Router>
       <ScrollToTop /> {/* Add ScrollToTop here */}
+      <CustomCursor /> {/* Add CustomCursor here */}
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,7 +29,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/schedule" element={<Schedule />} />
-          <Route path="*" element={<NotFound/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
     </Router>
