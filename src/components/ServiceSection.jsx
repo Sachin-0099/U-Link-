@@ -2,10 +2,13 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesSection = () => {
   const { t } = useTranslation();
   const [quickViewData, setQuickViewData] = useState(null);
+  const navigate = useNavigate();
+
 
   const services = [
     {
@@ -14,6 +17,7 @@ const ServicesSection = () => {
       description: t("Seamlessly launch your business on platforms like Amazon India, Flipkart, and Snapdeal. We guide you through every step — from account setup to catalog creation — ensuring you're marketplace-ready across India."),
       image: "/Images/AccountH.avif",
       color: "#4f46e5",
+      link: "/market",
       features: [
         t("Precision implementation"),
         t("Quality assurance"),
@@ -27,6 +31,8 @@ const ServicesSection = () => {
       description: t("Sell globally from India with zero hassle. Our end-to-end export services help businesses access international markets, managing logistics, compliance, and payment processing."),
       image: "/Images/crossBorder.avif",
       color: "#10b981",
+      link: "/cross-border",
+      
       features: [
         t("Comprehensive screening"),
         t("Skills assessment"),
@@ -40,6 +46,8 @@ const ServicesSection = () => {
       description: t("Stay on top of your stock and sales across marketplaces like Amazon.in, Flipkart.com, and Reliance Digital. Our dashboard supports real-time inventory tracking for sellers in India."),
       image: "/Images/Inventory & Order Management.avif",
       color: "#f59e0b",
+      link: "/inventory-management",
+      
       features: [
         t("Real-time tracking"),
         t("Automated stock alerts"),
@@ -53,6 +61,7 @@ const ServicesSection = () => {
       description: t("Fast, reliable delivery across India. We offer integrated shipping services including COD, express shipping, and pan-India fulfillment."),
       image: "/Images/Last-Mile Delivery & Logistics.avif",
       color: "#ef4444",
+      link:"/last-mile",
       features: [
         t("Flexible delivery options"),
         t("Real-time tracking"),
@@ -254,6 +263,7 @@ const ServicesSection = () => {
                   {t("Learn More")}
                 </motion.button>
                 <motion.button
+                onClick={() => navigate(service.link)}
                   whileHover={{ 
                     scale: 1.03, 
                     backgroundColor: service.color,
@@ -343,6 +353,7 @@ const ServicesSection = () => {
                       
                       <div className="flex flex-col sm:flex-row gap-4">
                         <motion.button
+                        onClick={() => navigate(service.link)}
                           whileHover={{ 
                             scale: 1.03, 
                             backgroundColor: quickViewData.color,

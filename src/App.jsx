@@ -14,6 +14,10 @@ import Schedule from './pages/Schedule';
 import NotFound from './pages/NotFound';
 import CustomCursor from './components/CustomCursor'; // Import CustomCursor
 import WhatsAppButton from './components/WhatsAppButton';
+import MarketplaceOnboarding from './components/MarketplaceOnboarding';
+import CrossBorderEcommerce from './components/CrossBorderEcommerce';
+import InventoryManagement from './components/InventoryManagement';
+import LastMileDelivery from './components/LastMileDelivery';
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/market" element={<MarketplaceOnboarding/>} />
+          <Route path="/cross-border" element={<CrossBorderEcommerce/>} />
+          <Route path="/inventory-management" element={<InventoryManagement/>} />
+          <Route path="/last-mile" element={<LastMileDelivery/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
