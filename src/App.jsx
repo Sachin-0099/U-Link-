@@ -13,6 +13,7 @@ import Blog from './pages/Blog';
 import Schedule from './pages/Schedule';
 import NotFound from './pages/NotFound';
 import CustomCursor from './components/CustomCursor'; // Import CustomCursor
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
+      <WhatsAppButton/>
     </Router>
   );
 }

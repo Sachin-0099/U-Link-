@@ -64,7 +64,7 @@ const CustomCursor = () => {
     <>
       <style>{`
         body {
-          cursor: none;
+          cursor: true  ;
         }
 
         .custom-cursor {
@@ -92,7 +92,7 @@ const CustomCursor = () => {
           left: 50%;
           transform: translate(-50%, -50%);
           transition: transform 0.2s ease;
-          box-shadow: 0 0 6px rgba(0, 144, 0, 0.7);
+        box-shadow: 0 0 6px rgba(183, 50, 53, 0.7);
         }
 
         .cursor-outer {
@@ -105,7 +105,7 @@ const CustomCursor = () => {
           left: 50%;
           transform: translate(-50%, -50%);
           transition: transform 0.3s ease;
-          box-shadow: 0 0 8px rgba(0, 144, 0, 0.4);
+             box-shadow: 0 0 6px rgba(183, 50, 53, 0.7);
         }
 
         .custom-cursor.active .cursor-inner {

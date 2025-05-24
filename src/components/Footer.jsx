@@ -617,10 +617,10 @@ const FooterSection = () => {
                 Follow Us
               </h4>
               <div className="flex gap-3">
-                <SocialLink href="#" icon={Facebook} name="Facebook" />
-                <SocialLink href="#" icon={Twitter} name="Twitter" />
+                <SocialLink href="https://www.facebook.com/profile.php?id=61576451541597" icon={Facebook} name="Facebook" />
+                <SocialLink href="https://x.com/Ulinkit11" icon={Twitter} name="Twitter" />
                 <SocialLink href="#" icon={Youtube} name="YouTube" />
-                <SocialLink href="https://www.linkedin.com/in/dhiraj-kumar-gupta-45b97730/" icon={Linkedin} name="LinkedIn" />
+                <SocialLink href="https://www.linkedin.com/in/ulink-it-391777364/" icon={Linkedin} name="LinkedIn" />
               </div>
             </div>
           </motion.div>
@@ -655,7 +655,7 @@ const FooterSection = () => {
           >
             <button
               onClick={scrollToTop}
-              className="bg-gradient-to-br from-red-500 to-red-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-[#b73235] text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
               aria-label="Back to Top"
             >
               <motion.div
