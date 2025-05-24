@@ -59,7 +59,7 @@ function Navbar() {
           <li>
             <a
               href="tel:8750518844"
-              className="flex items-center gap-2 px-4 py-3 text-[#b73235] border border-[#b73235] rounded-md hover:bg-green-100 transition hover:scale-105"
+              className="flex items-center gap-2 px-4 py-3 text-[#b73235] border border-[#b73235] rounded-md hover:bg-red-100 transition hover:scale-105"
             >
               
               <span>Call Us</span>
