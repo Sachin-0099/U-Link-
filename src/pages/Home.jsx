@@ -19,9 +19,9 @@ function Home() {
     <Journey/>
       <div style={{ margin: '40px auto', textAlign: 'center', maxWidth: '800px', fontSize: '16px', lineHeight: '1.6' }}>
         <p>
-          UlinkGulf is part of the Ulinkit global network — alongside{' '}
+          Ulinkitus is part of the Ulinkit global network — alongside{' '}
           <a href="https://ulinkit.com" target="_blank" rel="noopener noreferrer">Ulinkit.com</a> and{' '}
-          <a href="https://ulinkitus.com" target="_blank" rel="noopener noreferrer">Ulinkitus.com</a>
+          <a href="https://ulinkgulf.com" target="_blank" rel="noopener noreferrer">Ulinkgulf.com</a>
         </p>
       </div>
     <MissionVisionSection/>
