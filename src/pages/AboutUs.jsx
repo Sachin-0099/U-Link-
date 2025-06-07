@@ -153,6 +153,7 @@ const partners = [
 
 
 const AboutPage = () => {
+  
   const [activePartner, setActivePartner] = useState(0);
 
 const AutoRotateCarousel = ({ items, activeIndex, setActiveIndex, interval = 5000 }) => {
@@ -232,29 +233,39 @@ const AutoRotateCarousel = ({ items, activeIndex, setActiveIndex, interval = 500
         <meta name="twitter:description" content="15+ years of excellence in delivering cutting-edge IT, e-commerce, and procurement solutions to businesses worldwide." />
         <link rel="canonical" href="https://www.ulinkitus.com/about" />
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "U-Link It Us",
-            "url": "https://www.ulinkitus.com",
-            "logo": "https://www.ulinkitus.com/logo.png",
-            "description": "Global provider of IT solutions, e-commerce platforms, and procurement services",
-            "foundingDate": "2011",
-            "founder": {
-              "@type": "Person",
-              "name": "Dhiraj Kumar Gupta"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "India"
-            },
-            "sameAs": [
-              "https://www.linkedin.com/in/vineet-sharma-2663279/",
-              "https://x.com/dhirajkgupta84",
-             
-            ]
-          })}
-        </script>
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "U-Link It Us",
+        "url": "https://www.ulinkitus.com",
+        "logo": "https://www.ulinkitus.com/logo.png",
+        "description": "Global provider of IT solutions, e-commerce platforms, and procurement services",
+        "foundingDate": "2011",
+        "founder": {
+          "@type": "Person",
+          "name": "Dhiraj Kumar Gupta"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "India"
+        },
+        "hasPart": [
+          {
+            "@type": "WebSite",
+            "name": "Ulinkit Global",
+            "url": "https://www.ulinkit.com"
+          },
+          {
+            "@type": "WebSite",
+            "name": "Ulink Gulf",
+            "url": "https://www.ulinkgulf.com"
+          }
+        ]
+      }
+    `}
+</script>
+
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
