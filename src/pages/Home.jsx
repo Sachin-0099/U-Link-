@@ -10,6 +10,7 @@ import About from '../components/About';
 import Journey from '../components/Journey';
 import TeamShowcase from '../components/TeamShowCase';
 import PartnerTestimonials from '../components/Testimonials';
+import { Helmet } from 'react-helmet';
 
 function Home() {
   return (
