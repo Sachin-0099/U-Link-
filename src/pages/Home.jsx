@@ -14,6 +14,14 @@ import PartnerTestimonials from '../components/Testimonials';
 function Home() {
   return (
     <div>
+<Helmet>
+  <title>Ulinkit - U-Link It Us | Proven Success in IT & E-commerce</title>
+  <meta
+    name="description"
+    content="Ulinkitus is your trusted partner for innovative IT solutions, global e-commerce platforms, and seamless procurement services. Empowering businesses worldwide to grow and succeed."
+  />
+</Helmet>
+
     <Hero/>
     <About/>
     <Journey/>
