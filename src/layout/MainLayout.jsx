@@ -1,7 +1,8 @@
 // src/layout/MainLayout.jsx
 import React from 'react';
 import Navbar from '../components/HeaderNav';
-import Footer from '../components/Footer';
+import FooterSection from '../components/footer/FooterSection';
+// import FooterSection from '../components/Footer';
 
 function MainLayout({ children }) {
   return (
@@ -13,7 +14,7 @@ function MainLayout({ children }) {
         {children}
       </main>
       
-      <Footer />
+<FooterSection/>
     </div>
   );
 }
