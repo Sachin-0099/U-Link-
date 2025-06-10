@@ -28,19 +28,19 @@ const WhatsAppButton = () => {
     <>
      
       <Helmet>
-        <title>Contact Us on WhatsApp | UlinkGulf</title>
+        <title>Contact Us on WhatsApp | Ulink It Us</title>
         <meta
           name="description"
           content="Easily get in touch with our support team via WhatsApp for fast and efficient assistance. Click the WhatsApp button to chat with us instantly!"
         />
-        <meta property="og:title" content="Contact Us on WhatsApp | UlinkGulf" />
+        <meta property="og:title" content="Contact Us on WhatsApp | Ulink It Us" />
         <meta
           property="og:description"
           content="Need help? Our team is just a WhatsApp message away. Click to connect with us instantly!"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ulinkGulf.com" />
-        <meta property="og:image" content="https://ulinkGulf.com/og-whatsapp-support.jpg" />
+        <meta property="og:url" content="https://ulinkitus.com" />
+        <meta property="og:image" content="https://ulinkitus.com/og-whatsapp-support.jpg" />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
