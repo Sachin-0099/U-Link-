@@ -47,7 +47,7 @@ const WhatsAppButton = () => {
       {showButton && (
         <button
           onClick={handleClick}
-          className="fixed bottom-25 right-8 bg-[#b73235] text-white rounded-full p-4 shadow-lg hover:bg-red-600 transition z-50"
+          className="fixed bottom-28 right-7 bg-[#b73235] text-white rounded-full p-4 shadow-lg hover:bg-red-600 transition z-50"
           aria-label="Contact us on WhatsApp"
           title="Chat with us on WhatsApp"
         >
